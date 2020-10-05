@@ -19,8 +19,8 @@ body {
     padding-right: 15px;
   }
 }
-.bg1 {
-  background-image: url("img/patrick-fore-H5Lf0nGyetk-unsplash 1.png");
+.index-topbg {
+  background-image: url("img/index-topBg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -271,7 +271,7 @@ body {
 }
 .mainBlock__imgBox::after {
   content: "";
-  background-image: url("img/Ellipse 5.png");
+  background-image: url("img/mainBlock-ellipse.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.2;
@@ -328,7 +328,7 @@ body {
   opacity: 1;
 }
 .mainBlock__socNetwork-line1 {
-  background-image: url("img/Line 11.png");
+  background-image: url("img/mainBlock-verticalLine1.png");
   height: 116px;
   width: 1px;
   margin-bottom: 54px;
@@ -346,7 +346,7 @@ body {
   top: 0;
 }
 .mainBlock__socNetwork-line2 {
-  background-image: url("img/Line 12.png");
+  background-image: url("img/mainBlock-verticalLine2.png");
   height: 116px;
   width: 1px;
   margin-top: 54px;
@@ -382,7 +382,7 @@ body {
   margin-right: 10px;
 }
 .getConsultButton::after {
-  content: url("img/Line 14.png");
+  content: url("img/mainBlock-horizontalLine1.png");
   position: absolute;
   left: 29px;
   top: 12px;
@@ -408,7 +408,7 @@ body {
   margin-right: 13px;
 }
 .sendDocsButton::after {
-  content: url("img/Line 15.png");
+  content: url("img/mainBlock-horizontalLine2.png");
   position: absolute;
   left: 37px;
   top: 7px;
@@ -485,7 +485,7 @@ body {
     left: 5%;
   }
   .mainBlock__img {
-    background-image: url("img/twoGuys.png");
+    background-image: url("img/mainBlock-twoGuys.png");
     background-repeat: no-repeat;
     width: 100%;
     background-position: top right;
@@ -506,7 +506,7 @@ body {
   }
 }
 .servicesBlock {
-  background: url("img/Ellipse 9 (2).png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%), linear-gradient(0deg, #1F1E1B, #1F1E1B);
+  background: url("img/servicesBlock-bigEllipse.png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%), linear-gradient(0deg, #1F1E1B, #1F1E1B);
   text-align: center;
 }
 .servicesBlock__title {
@@ -527,7 +527,7 @@ body {
   margin-bottom: 30px;
   cursor: pointer;
   position: relative;
-  background-image: url("img/Ellipse 12.png");
+  background-image: url("img/servicesBlock-ellipses.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-position-y: 120%;
@@ -639,7 +639,7 @@ body {
   opacity: 1;
 }
 .showAllServices::after {
-  content: url("img/Line 33.png");
+  content: url("img/ourServices-line1.png");
   display: block;
   opacity: 1;
 }
@@ -732,7 +732,7 @@ body {
 .ourTeam__wrapper {
   display: flex;
   overflow: hidden;
-  background-image: url("img/Ellipse 5 (1).png");
+  background-image: url("img/ourTeam-ellipseBack.png");
   background-position: left;
   background-repeat: no-repeat;
   background-position-y: 250px;
