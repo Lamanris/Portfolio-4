@@ -510,7 +510,7 @@ body {
   text-align: center;
 }
 .servicesBlock__title {
-  padding-top: 57px;
+  padding-top: 65px;
   margin-bottom: 13px;
 }
 .servicesBlock__wrapper {
@@ -614,23 +614,17 @@ body {
 }
 
 .servicesBlock__physicWrapper {
-  transition: opacity 1s;
-  opacity: 0;
-  position: absolute;
+  display: none;
 }
 .servicesBlock__physicWrapper.active {
-  position: relative;
-  opacity: 1;
+  display: flex;
 }
 
 .servicesBlock__juristicWrapper {
-  position: absolute;
-  transition: opacity 1s;
-  opacity: 0;
+  display: none;
 }
 .servicesBlock__juristicWrapper.active {
-  position: relative;
-  opacity: 1;
+  display: flex;
 }
 
 .twoSwitchButtons {
@@ -916,7 +910,7 @@ body {
 }
 .ourReviews {
   background: #232222;
-  padding-bottom: 209px;
+  padding-bottom: 181px;
 }
 .ourReviews__title {
   padding-top: 72px;
@@ -958,6 +952,7 @@ body {
 .swiper-button-next, .swiper-button-prev {
   bottom: 20%;
   top: auto;
+  z-index: 1;
 }
 
 .swiper-slide {
@@ -994,6 +989,21 @@ body {
   display: flex;
 }
 
+.swiper-button-video {
+  display: none;
+}
+.swiper-button-video.active {
+  display: flex;
+}
+
+.swiper-button-photo {
+  display: none;
+  bottom: 25%;
+}
+.swiper-button-photo.active {
+  display: flex;
+}
+
 .videoButton.active {
   opacity: 1;
 }
@@ -1003,7 +1013,7 @@ body {
 }
 
 .ourReviews__switchLine.photo img {
-  transform: scale(-1, 1);
+  transform: scale(-1, 2);
   transition: all 1s;
 }
 .ourReviews__switchLine.photo::after {
@@ -1014,6 +1024,13 @@ body {
 }
 .ourReviews__switchLine.video::after {
   left: 100%;
+}
+
+.swiper-slide-photo img {
+  border-radius: 50px 0;
+}
+.swiper-slide-photo img:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 1330px) {
@@ -1029,13 +1046,17 @@ body {
   .swiper-button-next {
     right: 30%;
   }
+
+  .swiper-button-photo {
+    top: 25%;
+  }
 }
 @media (max-width: 1050px) {
   .ourReviews {
     padding-bottom: 89px;
   }
 }
-@media (max-width: 670px) {
+@media (max-width: 740px) {
   .swiper-button-prev {
     left: 10%;
   }
@@ -1197,6 +1218,7 @@ body {
   .ourWorks__title {
     margin-bottom: 36px;
     background: none;
+    margin-top: 72px;
   }
 }
 @media (max-width: 680px) {
@@ -1220,7 +1242,7 @@ body {
 }
 .ourPartners__title {
   color: white;
-  padding-top: 78px;
+  padding-top: 72px;
   margin-bottom: 46px;
 }
 .ourPartners__wrapper {
@@ -1423,7 +1445,7 @@ body {
     padding-bottom: 97px;
   }
   .contacts__title {
-    padding-top: 95px;
+    padding-top: 72px;
     padding-bottom: 59px;
   }
   .contacts__formBlock {
