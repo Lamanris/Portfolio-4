@@ -5,61 +5,198 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../slider/swiper-bundle.min.css">
     <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="../main.css">
     <link rel="shortcut icon" href=".././img/favicon.ico">
     <title>О компании</title>
 </head>
 <body>
-<div class="top-bg">
+<div class="aboutCompany-topBg">
     <header class="header">
         <div class="header__container container">
             <div class="header__leftSide">
-                <a href="#" class="header__logo logo"><p>Право <span>сознание</span></p></a>
-                <div class="header__address address">Тюмень,<br> ул. Водопроводная, 6, офис 110</div>
+                <a href="../index.html" class="header__logo logo aboutCompany-logo"><p>Право <span>сознание</span></p></a>
+                <div class="header__address address aboutCompany-address">Тюмень,<br> ул. Водопроводная, 6, офис 110</div>
             </div>
-            <div class="header__burger">
+            <div class="header__burger aboutCompany-header__burger">
                 <span></span>
             </div>
-            <div class="header__rightSide">
+            <div class="header__rightSide aboutCompany-header__rightSide">
                 <nav class="header__menu">
-                    <a class="header__menu-item" href="#">О компании</a>
-                    <a class="header__menu-item" href="#">Услуги</a>
-                    <a class="header__menu-item" href="#">Кейсы</a>
-                    <a class="header__menu-item" href="#">Контакты</a>
+                    <a class="header__menu__item aboutCompany-header__menu__item" href="#">О компании</a>
+                    <a class="header__menu__item aboutCompany-header__menu__item" href="#">Услуги</a>
+                    <a class="header__menu__item aboutCompany-header__menu__item" href="#">Кейсы</a>
+                    <a class="header__menu__item aboutCompany-header__menu__item" href="#">Контакты</a>
                 </nav>
                 <div class="header__contactInfo">
-                    <div class="header__number number">+7 3452 605-855</div>
-                    <div class="header__mail mail">info@pravo-72.ru</div>
+                    <div class="header__number number aboutCompany-number">+7 3452 605-855</div>
+                    <div class="header__mail mail aboutCompany-number">info@pravo-72.ru</div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="mainBLock">
-        <div class="mainBlock__container container">
 
+    <div class="aboutBlock">
+        <div class="aboutBlock__container container">
+            <div class="aboutBlock__content">
+                <div class="aboutBlock__textBox">
+                    <p class="aboutBlock__title">О компании <br> «Правосознание» </p>
+                    <p class="aboutBlock__text"><span>П</span>ри обращении за юридической помощью к компании «Правосознание», в интересах доверителей делается все для достижения положительного результата  или снижение к минимуму риска неблагоприятных последствий.<br><br> Клиенты получают качественные и профессиональные юридические услуги. Все проблемы доверителей адвокатом рассматриваются индивидуально.<br><br> Конфиденциальность взаимоотношений с адвокатом, гарантируется соблюдением адвокатской тайны</p>
+                </div>
+                <div class="aboutBlock__img"><img src="../img/aboutCompany-about__img.png" alt=""></div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="aboutCompany-middleBg">
+    <div class="specialityBlock">
+        <div class="specialityBlock__container container">
+                <h2 class="specialityBlock__title blockTitle">Специализируемся</h2>
+                <div class="specialityBlock__twoSwitchButtons twoSwitchButtons">
+                    <div class="specialityBlock__physicButton switchButtons physicButton.active">физическим лицам</div>
+                    <span><img src="../img/switchLine.png" alt=""></span>
+                    <div class="specialityBlock__juristicButton switchButtons juristicButton">юридическим лицам</div>
+                </div>
+                <div class="specialityBlock__wrapper typePhysic">
+                    <div class="specialityBlock__items">
+                        <div class="specialityBlock__items__content">
+                            <p class="specialityBlock__items__content__number">01</p>
+                            <img src="../img/awardIcon.svg" alt="">
+                            <h4 class="specialityBlock__items__content__title">Защита прав потребителей</h4>
+                            <p class="specialityBlock__items__content__text">Расторжение договора, заключенного между потребителем и исполнителем, взыскание денежных средств</p>
+                        </div>
+                    </div>
+                    <div class="specialityBlock__items">
+                        <div class="specialityBlock__items__content">
+                            <p class="specialityBlock__items__content__number">02</p>
+                            <img src="../img/usersIcon.svg" alt="">
+                            <h4 class="specialityBlock__items__content__title">Семейные споры</h4>
+                            <p class="specialityBlock__items__content__text">Взыскание алиментов, раздел имущества супругов, лишение родительских прав, определение места жительства детей</p>
+                        </div>
+                    </div>
+                    <div class="specialityBlock__items">
+                        <div class="specialityBlock__items__content">
+                            <p class="specialityBlock__items__content__number">03</p>
+                            <img src="../img/keyIcon.svg" alt="">
+                            <h4 class="specialityBlock__items__content__title">Жилищные споры</h4>
+                            <p class="specialityBlock__items__content__text">Признание права собственности, определение порядка пользования, возмещение ущерба от залива</p>
+                        </div>
+                    </div>
+                    <div class="specialityBlock__items">
+                        <div class="specialityBlock__items__content">
+                            <p class="specialityBlock__items__content__number">04</p>
+                            <img src="../img/slackIcon.svg" alt="">
+                            <h4 class="specialityBlock__items__content__title">Земельные споры</h4>
+                            <p class="specialityBlock__items__content__text">Признание права собственности, право на земельный участок, раздел земельного участка между супругами</p>
+                        </div>
+                    </div>
+                    <div class="specialityBlock__items">
+                        <div class="specialityBlock__items__content">
+                            <p class="specialityBlock__items__content__number">05</p>
+                            <img src="../img/shieldNoMarkIcon.svg" alt="">
+                            <h4 class="specialityBlock__items__content__title">Страховые споры</h4>
+                            <p class="specialityBlock__items__content__text">Страховые споры по КАСКО и ОСАГО</p>
+                        </div>
+                    </div>
+                    <div class="specialityBlock__items">
+                        <div class="specialityBlock__items__content">
+                            <p class="specialityBlock__items__content__number">06</p>
+                            <img src="../img/featherIcon.svg" alt="">
+                            <h4 class="specialityBlock__items__content__title">Представительство в суде</h4>
+                            <p class="specialityBlock__items__content__text">Юридически грамотное составление  документов, которые требуются в рамках судебного разбирательства</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="proudBlock">
+        <div class="proudBlock__container container">
+            <h2 class="proudBlock__title blockTitle">Гордимся</h2>
+            <div class="specialityBlock__photoButton twoSwitchButtons">
+                <div class="specialityBlock__photoButton switchButtons photoButton.active">фото</div>
+                <span><img src="../img/switchLine.png" alt=""></span>
+                <div class="specialityBlock__videoButton switchButtons videoButton">видео</div>
+            </div>
+            <button class="swiper-button-prev aboutCompany-swiper-button-prev"></button>
+            <button class="swiper-button-next aboutCompany-swiper-button-next"></button>
+            <div class="slider-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo1.png" alt=""></a></div>
+                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo2.png" alt=""></a></div>
+                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo3.png" alt=""></a></div>
+                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo1.png" alt=""></a></div>
+                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo2.png" alt=""></a></div>
+                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo3.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="numbersBlock">
+    <div class="numbersBlock__container container">
+        <h2 class="numbersBlock__title blockTitle">Цифры</h2>
+        <div class="numbersBlock__numbersInfo">
+            <div class="numbersBlock__numbersInfo__item">
+                <p class="numbersBlock__numbersInfo__item__title">200 +</p>
+                <span class="numbersBlock__numbersInfo__item__text">Дел выиграно <br> за 2019 год</span>
+            </div>
+            <div class="numbersBlock__numbersInfo__item">
+                <p class="numbersBlock__numbersInfo__item__title">95%</p>
+                <span class="numbersBlock__numbersInfo__item__text">Исход в нашу <br> пользу</span>
+            </div>
+            <div class="numbersBlock__numbersInfo__item">
+                <p class="numbersBlock__numbersInfo__item__title">7</p>
+                <span class="numbersBlock__numbersInfo__item__text">Лет на рынке <br> юридических <br> услуг</span>
+            </div>
+            <div class="numbersBlock__numbersInfo__item">
+                <p class="numbersBlock__numbersInfo__item__title">30 +</p>
+                <span class="numbersBlock__numbersInfo__item__text">Адвокатов <br> и юристов</span>
+            </div>
+        </div>
+        <div class="numbersBlock__wrapper">
+            <div class="numbersBlock__wrapper__textBlock"><p>Мы сообща решаем неординарные задачи. Задайте вопросы и получите руководства к действию.</p></div>
+            <div class="numbersBlock__formBlock">
+                <div class="numbersBlock__formBlock__wrapper">
+                    <div class="numbersBlock__formBlock__content">
+                        <h4 class="numbersBlock__formBlock__title">Бесплатная юридическая консультация</h4>
+                        <form action="#">
+                            <div class="numbersBlock__formBlock__input"><input placeholder="Имя" type="text" required></div>
+                            <div class="numbersBlock__formBlock__input"><input placeholder="Телефон" type="text" required></div>
+                            <div class="numbersBlock__formBlock__submitButton"><input type="submit" value="отправить"></div>
+                        </form>
+                        <span class="numbersBlock__formBlock__text">нажимая на кнопку отправить я соглашаюсь на обработку своих персональных данных в соответсвии с ФЗ №152</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__container container aboutCompany-footer__container">
+        <a href="../index.html" class="footer__logo logo"><p>Право <span>сознание</span></p></a>
+        <div class="footer__menu">
+            <a href="../index.html" class="footer__menu__item">Главная</a>
+            <a href="#" class="footer__menu__item">Услуги</a>
+            <a href="#" class="footer__menu__item">Контакты</a>
+            <a href="aboutCompany.html" class="footer__menu__item">О компании</a>
+            <a href="#" class="footer__menu__item">Кейсы</a>
+        </div>
+        <div class="footer__contacts">
+            <p class="footer__address">Тюмень, Водопроводная 6, офис 110</p>
+            <div class="footer__contactInfo">
+                <span class="footer__number">+7 3452 605-855</span>
+                <span class="footer__mail">info@pravo-72.ru</span>
+            </div>
+            <a class="footer__icon" href="#"><img src="../img/telegramIcon.svg" alt=""></a>
+            <a class="footer__icon" href="#"><img src="../img/whatsappIcon.svg" alt=""></a>
+            <a class="footer__icon" href="#"><img src="../img/viberIcon.svg" alt=""></a>
+        </div>
+    </div>
+</footer>
 
 
 
@@ -80,6 +217,8 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="main.js"></script>
+<script src="../slider/swiper-bundle.min.js"></script>
+<script src="../slider/slider.js"></script>
+<script src="../main.js"></script>
 </body>
 </html>
