@@ -19,7 +19,7 @@ body {
 }
 
 .index-topbg {
-  background-image: url("img/index-topBg.png");
+  background-image: url("../img/index-topBg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -91,7 +91,7 @@ body {
   float: left;
   text-decoration: none;
       span {
-        background: url("img/header-logoBack.png") no-repeat center;
+        background: url("../img/header-logoBack.png") no-repeat center;
         color: #494411;
         padding: 4px 8px 7px;
       }
@@ -262,7 +262,7 @@ body {
         position: relative;
            &::after {
              content: "";
-             background-image: url("img/mainBlock-ellipse.png");
+             background-image: url("../img/mainBlock-ellipse.png");
              background-repeat: no-repeat;
              background-size: cover;
              opacity: 0.2;
@@ -320,7 +320,7 @@ body {
                   }
             }
             &-line1 {
-              background-image: url("img/mainBlock-verticalLine1.png");
+              background-image: url("../img/mainBlock-verticalLine1.png");
               height: 116px;
               width: 1px;
               margin-bottom: 54px;
@@ -338,7 +338,7 @@ body {
                   }
             }
             &-line2 {
-              background-image: url("img/mainBlock-verticalLine2.png");
+              background-image: url("../img/mainBlock-verticalLine2.png");
               height: 116px;
               width: 1px;
               margin-top: 54px;
@@ -370,14 +370,15 @@ body {
   margin-top: 46px;
   transition: all .8s;
       &::before {
-        content: url("img/phoneIcon.svg");
+        content: url("../img/phoneIcon.svg");
         margin-right: 10px;
           }
       &::after {
-        content: url("img/mainBlock-horizontalLine1.png");
+        content: url("../img/mainBlock-horizontalLine1.png");
         position: absolute;
         left: 29px;
         top: 12px;
+        margin-top: 5px;
       }
       &:hover {
         opacity: 1;
@@ -395,14 +396,15 @@ body {
   position: relative;
   transition: all .8s;
       &::before {
-        content: url("img/docIcon.svg");
+        content: url("../img/docIcon.svg");
         margin-right: 13px;
       }
       &::after {
-        content: url("img/mainBlock-horizontalLine2.png");
+        content: url("../img/mainBlock-horizontalLine2.png");
         position: absolute;
         left: 37px;
         top: 7px;
+        margin-top: 5px;
       }
       &:hover {
         opacity: 1;
@@ -481,7 +483,7 @@ body {
           }
         }
         &__img {
-          background-image: url("img/mainBlock-twoGuys.png");
+          background-image: url("../img/mainBlock-twoGuys.png");
           background-repeat: no-repeat;
           width: 100%;
           background-position: top right;
@@ -507,7 +509,7 @@ body {
 }
 
 .servicesBlock {
-  background: url("img/servicesBlock-bigEllipse.png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%),
+  background: url("../img/servicesBlock-bigEllipse.png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%),
   linear-gradient(0deg, #1F1E1B, #1F1E1B);
   text-align: center;
         &__title {
@@ -528,7 +530,7 @@ body {
           margin-bottom: 30px;
           cursor: pointer;
           position: relative;
-          background-image: url("img/servicesBlock-ellipses.png");
+          background-image: url("../img/servicesBlock-ellipses.png");
           background-repeat: no-repeat;
           background-position: right bottom;
           background-position-y: 120%;
@@ -678,7 +680,7 @@ body {
         opacity: 1;
       }
       &::after {
-        content: url("img/ourServices-line1.png");
+        content: url("../img/ourServices-line1.png");
         display: block;
         opacity: 1;
       }
@@ -783,7 +785,7 @@ body {
         &__wrapper {
           display: flex;
           overflow: hidden;
-          background-image: url("img/ourTeam-ellipseBack.png");
+          background-image: url("../img/ourTeam-ellipseBack.png");
           background-position: left;
           background-repeat: no-repeat;
           background-position-y: 250px;
@@ -942,7 +944,7 @@ body {
   opacity: .7;
   left: -70px;
         &::after {
-          content: url("img/slider-leftArrow.svg");
+          content: url("../img/slider-leftArrow.svg");
         }
         &:hover {
           opacity: 1;
@@ -955,7 +957,7 @@ body {
   opacity: .7;
   right: -65px;
         &::after {
-          content: url("img/slider-rightArrow.svg");
+          content: url("../img/slider-rightArrow.svg");
         }
         &:hover {
           opacity: 1;
@@ -1077,7 +1079,7 @@ body {
 }
 
 .ourWorks {
-  background-image: url("img/ourWorks-Back.png");
+  background-image: url("../img/ourWorks-Back.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -1297,7 +1299,7 @@ body {
 }
 
 .contacts {
-  background-image: url("img/contacts-backGround.png");
+  background-image: url("../img/contacts-backGround.png");
   background-size: cover;
       &__container {
         display: flex;
@@ -1678,6 +1680,10 @@ body {
         color: #bea000;
       }
     }
+  }
+  &-highlighted {
+      color: #bea000;
+      opacity: 1;
   }
   &-logo {
     color: #423805;
@@ -2128,4 +2134,167 @@ body {
 .aboutCompany-footer__container {
   padding-top: 98px;
   padding-bottom: 98px;
+}
+
+//servicesHtml
+
+.servicesHtml-topBg {
+  background: url("../img/servicesHtml-topBg.png") center / cover no-repeat;
+}
+.servicesHtml-highlighted {
+  color: #FCFFD5;
+  text-shadow: 0 0 3px rgba(252, 255, 212, 0.7);
+  opacity: 1;
+}
+.servicesHtml {
+      &-mainBlock__textBox {
+        width: 52%;
+        margin-right: 0;
+      }
+      &-mainBlock__title {
+        margin-top: 105px;
+      }
+      &-mainBlock__getConsultButton {
+        margin-top: 38px;
+      }
+      &-mainBlock__imgBox {
+        margin-top: 44px;
+        min-width: 428px;
+        justify-content: flex-start;
+            &::after {
+              left: -20%;
+              top: 60%;
+              min-width: 600px;
+            }
+
+      }
+      &-mainBlock__socNetwork {
+            &-line1 {
+              margin-bottom: 21px;
+            }
+            &-line2 {
+              margin-top: 21px;
+            }
+      }
+}
+
+@media (max-width: 1010px) {
+  .servicesHtml {
+    &-mainBlock__textBox {
+      width: 70%;
+    }
+    &-mainBlock__title {
+      margin-top: 58px;
+    }
+    &-mainBlock__imgBox {
+      margin-top: 44px;
+      min-width: 428px;
+      justify-content: flex-end;
+      width: 30%;
+      .servicesHtml-mainBlock__img {
+        width: 100%;
+            img {
+              width: 100%;
+            }
+      }
+      &::after {
+        left: -25%;
+        top: 0;
+        background-size: auto;
+        min-width: 560px;
+      }
+
+    }
+  }
+//  .mainBlock {
+//    &__textBox {
+//      margin-right: 0;
+//      width: 40%;
+//    }
+//    &__imgBox-name {
+//      margin-top: 76px;
+//      margin-right: -20px;
+//    }
+//    &__socNetwork {
+//      display: none;
+//    }
+//    &__title {
+//      margin-top: 58px;
+//    }
+//    &__imgBox {
+//      padding-right: 0;
+//      margin-top: 150px;
+//      &::after {
+//        background-size: auto;
+//        left: 100px;
+//      }
+//      .mainBlock__img {
+//        padding-right: 0;
+//      }
+//    }
+//    &__img {
+//      width: 51%;
+//    }
+//
+//  }
+}
+@media (max-width: 742px) {
+  .mainBlock {
+    &__container {
+      flex-direction: column;
+    }
+    &__textBox {
+      width: 100%;
+      margin-top: 70px;
+    }
+    &__getConsultButton {
+      font-size: 17px;
+      line-height: 24px;
+      padding: 18px 17px 19px 18px;
+      border: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      filter: drop-shadow(0px 0px 26px rgba(149, 127, 61, 0.68));
+      border-radius: 3px;
+      display: inline-block;
+      &::before, &::after {
+        display: none;
+      }
+    }
+    &__imgBox {
+      width: 100%;
+      margin-top: 40px;
+      &-name {
+        display: none;
+      }
+      &::after {
+        background-size: cover;
+        opacity: 1;
+        top: 30%;
+        left: 5%;
+      }
+    }
+    &__img {
+      background-image: url("../img/mainBlock-twoGuys.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: top right;
+      background-size: 85%;
+      img {
+        opacity: 0;
+        width: 52%;
+      }
+    }
+  }
+}
+
+@media (max-width: 361px) {
+  .mainBlock {
+    &__title {
+      font-size: 44px;
+    }
+    &__getConsultButton {
+      font-size: 15px;
+      padding: 14px 13px 15px 14px;
+    }
+  }
 }

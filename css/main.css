@@ -20,7 +20,7 @@ body {
   }
 }
 .index-topbg {
-  background-image: url("img/index-topBg.png");
+  background-image: url("../img/index-topBg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -93,7 +93,7 @@ body {
   text-decoration: none;
 }
 .logo span {
-  background: url("img/header-logoBack.png") no-repeat center;
+  background: url("../img/header-logoBack.png") no-repeat center;
   color: #494411;
   padding: 4px 8px 7px;
 }
@@ -271,7 +271,7 @@ body {
 }
 .mainBlock__imgBox::after {
   content: "";
-  background-image: url("img/mainBlock-ellipse.png");
+  background-image: url("../img/mainBlock-ellipse.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.2;
@@ -328,7 +328,7 @@ body {
   opacity: 1;
 }
 .mainBlock__socNetwork-line1 {
-  background-image: url("img/mainBlock-verticalLine1.png");
+  background-image: url("../img/mainBlock-verticalLine1.png");
   height: 116px;
   width: 1px;
   margin-bottom: 54px;
@@ -346,7 +346,7 @@ body {
   top: 0;
 }
 .mainBlock__socNetwork-line2 {
-  background-image: url("img/mainBlock-verticalLine2.png");
+  background-image: url("../img/mainBlock-verticalLine2.png");
   height: 116px;
   width: 1px;
   margin-top: 54px;
@@ -378,14 +378,15 @@ body {
   transition: all 0.8s;
 }
 .getConsultButton::before {
-  content: url("img/phoneIcon.svg");
+  content: url("../img/phoneIcon.svg");
   margin-right: 10px;
 }
 .getConsultButton::after {
-  content: url("img/mainBlock-horizontalLine1.png");
+  content: url("../img/mainBlock-horizontalLine1.png");
   position: absolute;
   left: 29px;
   top: 12px;
+  margin-top: 5px;
 }
 .getConsultButton:hover {
   opacity: 1;
@@ -404,14 +405,15 @@ body {
   transition: all 0.8s;
 }
 .sendDocsButton::before {
-  content: url("img/docIcon.svg");
+  content: url("../img/docIcon.svg");
   margin-right: 13px;
 }
 .sendDocsButton::after {
-  content: url("img/mainBlock-horizontalLine2.png");
+  content: url("../img/mainBlock-horizontalLine2.png");
   position: absolute;
   left: 37px;
   top: 7px;
+  margin-top: 5px;
 }
 .sendDocsButton:hover {
   opacity: 1;
@@ -485,7 +487,7 @@ body {
     left: 5%;
   }
   .mainBlock__img {
-    background-image: url("img/mainBlock-twoGuys.png");
+    background-image: url("../img/mainBlock-twoGuys.png");
     background-repeat: no-repeat;
     width: 100%;
     background-position: top right;
@@ -506,7 +508,7 @@ body {
   }
 }
 .servicesBlock {
-  background: url("img/servicesBlock-bigEllipse.png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%), linear-gradient(0deg, #1F1E1B, #1F1E1B);
+  background: url("../img/servicesBlock-bigEllipse.png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%), linear-gradient(0deg, #1F1E1B, #1F1E1B);
   text-align: center;
 }
 .servicesBlock__title {
@@ -527,7 +529,7 @@ body {
   margin-bottom: 30px;
   cursor: pointer;
   position: relative;
-  background-image: url("img/servicesBlock-ellipses.png");
+  background-image: url("../img/servicesBlock-ellipses.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-position-y: 120%;
@@ -682,7 +684,7 @@ body {
   opacity: 1;
 }
 .showAllServices::after {
-  content: url("img/ourServices-line1.png");
+  content: url("../img/ourServices-line1.png");
   display: block;
   opacity: 1;
 }
@@ -775,7 +777,7 @@ body {
 .ourTeam__wrapper {
   display: flex;
   overflow: hidden;
-  background-image: url("img/ourTeam-ellipseBack.png");
+  background-image: url("../img/ourTeam-ellipseBack.png");
   background-position: left;
   background-repeat: no-repeat;
   background-position-y: 250px;
@@ -929,7 +931,7 @@ body {
   left: -70px;
 }
 .swiper-button-prev::after {
-  content: url("img/slider-leftArrow.svg");
+  content: url("../img/slider-leftArrow.svg");
 }
 .swiper-button-prev:hover {
   opacity: 1;
@@ -943,7 +945,7 @@ body {
   right: -65px;
 }
 .swiper-button-next::after {
-  content: url("img/slider-rightArrow.svg");
+  content: url("../img/slider-rightArrow.svg");
 }
 .swiper-button-next:hover {
   opacity: 1;
@@ -1066,7 +1068,7 @@ body {
   }
 }
 .ourWorks {
-  background-image: url("img/ourWorks-Back.png");
+  background-image: url("../img/ourWorks-Back.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -1272,7 +1274,7 @@ body {
   }
 }
 .contacts {
-  background-image: url("img/contacts-backGround.png");
+  background-image: url("../img/contacts-backGround.png");
   background-size: cover;
 }
 .contacts__container {
@@ -1634,6 +1636,10 @@ body {
 }
 .aboutCompany-header__menu__item:hover {
   color: #bea000;
+}
+.aboutCompany-highlighted {
+  color: #bea000;
+  opacity: 1;
 }
 .aboutCompany-logo {
   color: #423805;
@@ -2050,4 +2056,123 @@ body {
 .aboutCompany-footer__container {
   padding-top: 98px;
   padding-bottom: 98px;
+}
+
+.servicesHtml-topBg {
+  background: url("../img/servicesHtml-topBg.png") center/cover no-repeat;
+}
+
+.servicesHtml-highlighted {
+  color: #FCFFD5;
+  text-shadow: 0 0 3px rgba(252, 255, 212, 0.7);
+  opacity: 1;
+}
+
+.servicesHtml-mainBlock__textBox {
+  width: 52%;
+  margin-right: 0;
+}
+.servicesHtml-mainBlock__title {
+  margin-top: 105px;
+}
+.servicesHtml-mainBlock__getConsultButton {
+  margin-top: 38px;
+}
+.servicesHtml-mainBlock__imgBox {
+  margin-top: 44px;
+  min-width: 428px;
+  justify-content: flex-start;
+}
+.servicesHtml-mainBlock__imgBox::after {
+  left: -20%;
+  top: 60%;
+  min-width: 600px;
+}
+.servicesHtml-mainBlock__socNetwork-line1 {
+  margin-bottom: 21px;
+}
+.servicesHtml-mainBlock__socNetwork-line2 {
+  margin-top: 21px;
+}
+
+@media (max-width: 1010px) {
+  .servicesHtml-mainBlock__textBox {
+    width: 70%;
+  }
+  .servicesHtml-mainBlock__title {
+    margin-top: 58px;
+  }
+  .servicesHtml-mainBlock__imgBox {
+    margin-top: 44px;
+    min-width: 428px;
+    justify-content: flex-end;
+    width: 30%;
+  }
+  .servicesHtml-mainBlock__imgBox .servicesHtml-mainBlock__img {
+    width: 100%;
+  }
+  .servicesHtml-mainBlock__imgBox .servicesHtml-mainBlock__img img {
+    width: 100%;
+  }
+  .servicesHtml-mainBlock__imgBox::after {
+    left: -25%;
+    top: 0;
+    background-size: auto;
+    min-width: 560px;
+  }
+}
+@media (max-width: 742px) {
+  .mainBlock__container {
+    flex-direction: column;
+  }
+  .mainBlock__textBox {
+    width: 100%;
+    margin-top: 70px;
+  }
+  .mainBlock__getConsultButton {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 18px 17px 19px 18px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 26px rgba(149, 127, 61, 0.68));
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .mainBlock__getConsultButton::before, .mainBlock__getConsultButton::after {
+    display: none;
+  }
+  .mainBlock__imgBox {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .mainBlock__imgBox-name {
+    display: none;
+  }
+  .mainBlock__imgBox::after {
+    background-size: cover;
+    opacity: 1;
+    top: 30%;
+    left: 5%;
+  }
+  .mainBlock__img {
+    background-image: url("../img/mainBlock-twoGuys.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: top right;
+    background-size: 85%;
+  }
+  .mainBlock__img img {
+    opacity: 0;
+    width: 52%;
+  }
+}
+@media (max-width: 361px) {
+  .mainBlock__title {
+    font-size: 44px;
+  }
+  .mainBlock__getConsultButton {
+    font-size: 15px;
+    padding: 14px 13px 15px 14px;
+  }
 }

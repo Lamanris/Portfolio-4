@@ -5,7 +5,6 @@ $(document).ready(function(){
     });
 });
 
-
 let physicWrapper = document.getElementById('servicesBlock__physicWrapper');
 let juristicWrapper = document.getElementById('servicesBlock__juristicWrapper');
 let physicButton = document.getElementById('physicButton');
