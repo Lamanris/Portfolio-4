@@ -1,7 +1,7 @@
-const swiper = document.querySelector('.swiper-container');
+const videoSwiper = document.querySelector('.videoSwiper-container');
 
 
-let mySwiper = new Swiper(swiper, {
+let videoSwiper1 = new Swiper(videoSwiper, {
     loop: true,
     navigation: {
         nextEl:'.swiper-button-next',
@@ -20,6 +20,26 @@ let mySwiper = new Swiper(swiper, {
         860: {
             slidesPerView: 3,
             spaceBetween: 77,
+        }
+    }
+});
+
+const photoSwiper = document.querySelector('.photoSwiper-container');
+
+let photoSwiper1 = new Swiper(photoSwiper, {
+    loop: true,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        640: {
+            slidesPerView: 3,
+        },
+        860: {
+            slidesPerView: 6,
+            spaceBetween: 34,
         }
     }
 });
