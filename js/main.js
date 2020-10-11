@@ -5,7 +5,6 @@ $(document).ready(function(){
     });
 });
 
-
 let physicWrapper = document.getElementById('servicesBlock__physicWrapper');
 let juristicWrapper = document.getElementById('servicesBlock__juristicWrapper');
 let physicButton = document.getElementById('physicButton');
@@ -38,16 +37,24 @@ let photoButton = document.getElementById('photoButton');
 let videoButton = document.getElementById('videoButton');
 let photoSlider = document.getElementById('photo-slider');
 let videoSlider = document.getElementById('video-slider');
-let ourReviews__switchLine = document.getElementById('ourReviews__switchLine')
+let ourReviews__switchLine = document.getElementById('ourReviews__switchLine');
+let swiperButtonNextPhoto = document.getElementById('swiper-button-next-photo');
+let swiperButtonPrevPhoto = document.getElementById('swiper-button-prev-photo');
+let swiperButtonNextVideo = document.getElementById('swiper-button-next-video');
+let swiperButtonPrevVideo = document.getElementById('swiper-button-prev-video');
 
 photoButton.addEventListener('click', function () {
     if (!(this.classList.contains('active'))) {
         videoButton.classList.remove('active');
         videoSlider.classList.remove('active');
         ourReviews__switchLine.classList.remove('video');
+        swiperButtonNextVideo.classList.remove('active');
+        swiperButtonPrevVideo.classList.remove('active');
         this.classList.add('active');
         photoSlider.classList.add('active');
-        ourReviews__switchLine.classList.add('photo')
+        ourReviews__switchLine.classList.add('photo');
+        swiperButtonNextPhoto.classList.add('active');
+        swiperButtonPrevPhoto.classList.add('active');
     }
 });
 
@@ -56,9 +63,13 @@ videoButton.addEventListener('click', function () {
         photoButton.classList.remove('active');
         photoSlider.classList.remove('active');
         ourReviews__switchLine.classList.remove('photo');
+        swiperButtonNextPhoto.classList.remove('active');
+        swiperButtonPrevPhoto.classList.remove('active');
         this.classList.add('active');
         videoSlider.classList.add('active');
-        ourReviews__switchLine.classList.add('video')
+        ourReviews__switchLine.classList.add('video');
+        swiperButtonNextVideo.classList.add('active');
+        swiperButtonPrevVideo.classList.add('active');
     }
 });
 
