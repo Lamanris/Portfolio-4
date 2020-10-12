@@ -615,17 +615,17 @@ body {
   position: relative;
 }
 
-.servicesBlock__physicWrapper {
+.physicWrapper {
   display: none;
 }
-.servicesBlock__physicWrapper.active {
+.physicWrapper.active {
   display: flex;
 }
 
-.servicesBlock__juristicWrapper {
+.juristicWrapper {
   display: none;
 }
-.servicesBlock__juristicWrapper.active {
+.juristicWrapper.active {
   display: flex;
 }
 
@@ -1778,7 +1778,6 @@ body {
 }
 .specialityBlock__wrapper {
   margin-top: 40px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -2177,6 +2176,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .chooseServiceBlock__switchButtons:hover {
   color: #FCFFD5;

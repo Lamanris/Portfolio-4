@@ -5,8 +5,8 @@ $(document).ready(function(){
     });
 });
 
-let physicWrapper = document.getElementById('servicesBlock__physicWrapper');
-let juristicWrapper = document.getElementById('servicesBlock__juristicWrapper');
+let physicWrapper = document.getElementById('physicWrapper');
+let juristicWrapper = document.getElementById('juristicWrapper');
 let physicButton = document.getElementById('physicButton');
 let juristicButton = document.getElementById('juristicButton');
 let switchLine = document.getElementById('switchLine');

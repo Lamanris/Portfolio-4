@@ -611,13 +611,13 @@ body {
 .servicesBlock__bigWrapper {
   position: relative;
 }
-.servicesBlock__physicWrapper {
+.physicWrapper {
   display: none;
       &.active {
         display: flex;
       }
 }
-.servicesBlock__juristicWrapper {
+.juristicWrapper {
   display: none;
       &.active {
         display: flex;
@@ -1834,7 +1834,6 @@ body {
       }
       &__wrapper {
         margin-top: 40px;
-        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
@@ -2266,6 +2265,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
             &:hover {
               color: #FCFFD5;
               opacity: 0.9;
