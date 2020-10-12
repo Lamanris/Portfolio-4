@@ -93,9 +93,9 @@ body {
   text-decoration: none;
 }
 .logo span {
-  background: url("../img/header-logoBack.png") no-repeat center;
+  background: url("../img/header-logoBack.png") no-repeat left;
   color: #494411;
-  padding: 4px 8px 7px;
+  padding: 4px 10px 7px 7px;
 }
 
 .address {
@@ -2147,5 +2147,94 @@ body {
 @media (max-width: 435px) {
   .servicesHtml-mainBlock__title {
     font-size: 37px;
+  }
+}
+.chooseServiceBlock {
+  background: url(../img/servicesHtml-chooseServiceBlock.png), linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+  box-shadow: inset 16px 19px rgba(0, 0, 0, 0.02);
+  background-size: cover;
+}
+.chooseServiceBlock__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 170px;
+  padding-bottom: 186px;
+}
+.chooseServiceBlock__buttons {
+  display: flex;
+  align-items: flex-end;
+}
+.chooseServiceBlock__switchButtons {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 35px;
+  color: #F2F2F2;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chooseServiceBlock__switchButtons:hover {
+  color: #FCFFD5;
+  opacity: 0.9;
+  text-shadow: 0 0 19px rgba(252, 255, 212, 0.43);
+}
+.chooseServiceBlock__switchButtons.active {
+  color: #FCFFD5;
+  opacity: 0.9;
+  text-shadow: 0 0 19px rgba(252, 255, 212, 0.43);
+}
+.chooseServiceBlock__lineBetween {
+  margin-left: 132px;
+  margin-right: 132px;
+  opacity: 0.5;
+}
+.chooseServiceBlock__physicButton::before {
+  content: url("../img/bookIcon.svg");
+}
+.chooseServiceBlock__juristicButton::before {
+  content: url("../img/bookStackIcon.svg");
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1090px) {
+  .chooseServiceBlock__lineBetween {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+}
+@media (max-width: 1000px) {
+  .chooseServiceBlock__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chooseServiceBlock__lineBetween {
+    display: none;
+  }
+  .chooseServiceBlock__physicButton {
+    margin-bottom: 100px;
+  }
+  .chooseServiceBlock__wrapper {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 500px) {
+  .chooseServiceBlock__switchButtons {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .chooseServiceBlock__wrapper {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 340px) {
+  .chooseServiceBlock__switchButtons {
+    font-size: 29px;
   }
 }
