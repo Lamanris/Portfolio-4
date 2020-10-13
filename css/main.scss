@@ -109,6 +109,11 @@ body {
 .header__burger {
   display: none;
 }
+.header__menu__item-highlighted {
+    color: #FCFFD5;
+    text-shadow: 0 0 3px rgba(252, 255, 212, 0.7);
+    opacity: 1;
+}
 @media (max-width: 950px) {
   .header {
         &__leftSide {
@@ -2266,11 +2271,6 @@ body {
 .servicesHtml-topBg {
   background: url("../img/servicesHtml-topBg.png") center / cover no-repeat;
 }
-.servicesHtml-highlighted {
-  color: #FCFFD5;
-  text-shadow: 0 0 3px rgba(252, 255, 212, 0.7);
-  opacity: 1;
-}
 .servicesHtml {
       &-mainBlock__textBox {
         width: 52%;
@@ -2466,3 +2466,9 @@ body {
   }
 }
 
+// ContactsHtml
+
+.contactsHtml-contactsBlock {
+  background-color: #252323;
+  background-image: none;
+}

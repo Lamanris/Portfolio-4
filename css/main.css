@@ -113,6 +113,12 @@ body {
   display: none;
 }
 
+.header__menu__item-highlighted {
+  color: #FCFFD5;
+  text-shadow: 0 0 3px rgba(252, 255, 212, 0.7);
+  opacity: 1;
+}
+
 @media (max-width: 950px) {
   .header__leftSide {
     width: 29%;
@@ -2190,12 +2196,6 @@ body {
   background: url("../img/servicesHtml-topBg.png") center/cover no-repeat;
 }
 
-.servicesHtml-highlighted {
-  color: #FCFFD5;
-  text-shadow: 0 0 3px rgba(252, 255, 212, 0.7);
-  opacity: 1;
-}
-
 .servicesHtml-mainBlock__textBox {
   width: 52%;
   margin-right: 0;
@@ -2366,4 +2366,8 @@ body {
   .chooseServiceBlock__switchButtons {
     font-size: 29px;
   }
+}
+.contactsHtml-contactsBlock {
+  background-color: #252323;
+  background-image: none;
 }
