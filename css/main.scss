@@ -1120,7 +1120,9 @@ body {
               padding-bottom: 19px;
                   &.active {
                     opacity: 1;
-                    color: #FFFFFF;
+                    color: #FCFFD5;
+                    background: rgba(255, 255, 255, 0.06);
+                    border-radius: 30px 0;
                   }
                   &:hover {
                     background: rgba(255, 255, 255, 0.06);
@@ -1133,8 +1135,9 @@ body {
         max-width: 808px;
         margin: 28px auto 0;
         padding-bottom: 65px;
-            &2,&3,&4,&5,&6,&7 {
-              display: none;
+        display: none;
+            &.active {
+              display: block;
             }
             img {
               float: left;
@@ -1194,6 +1197,80 @@ body {
         max-width: 270px;
       }
 }
+.ourWorks__example-popup {
+  display: none;
+      &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #252322;
+        border-radius: 50px 0;
+        z-index: 100;
+      }
+      &__icon {
+        position: absolute;
+        right: 55px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+      &__wrapper {
+        position: relative;
+      }
+      &__body {
+        max-width: 600px;
+        margin-left: 56px;
+        padding-bottom: 77px;
+      }
+      &__img {
+          width: 38%;
+          float: left;
+          margin-right: 27px;
+      }
+      &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+        margin-top: 55px;
+        margin-bottom: 34px;
+      }
+      &__subTitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        margin-bottom: 11px;
+      }
+      &__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        opacity: 0.7;
+      }
+      &__readMoreButton {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+        opacity: 0.95;
+        transition: all .8s;
+        cursor: pointer;
+        display: block;
+        margin-top: 14px;
+        margin-bottom: 29px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+}
 @media (max-width: 1030px){
   .ourWorks__menuItem {
     font-size: 14px;
@@ -1206,7 +1283,9 @@ body {
     }
 
     &__example {
-      display: none;
+          &.active {
+            display: none;
+          }
     }
     &__menu {
       padding-bottom: 62px;
@@ -1237,6 +1316,21 @@ body {
       margin-top: 72px;
     }
   }
+  .ourWorks__example-popup {
+    &.active {
+      display: block;
+      overflow: auto;
+    }
+  }
+  body.ourWorks-popupLock {
+    overflow: hidden;
+  }
+}
+@media (max-width: 720px) {
+  .ourWorks__example-popup__icon {
+    position: static;
+    float: right;
+  }
 }
 @media (max-width: 680px) {
   .ourWorks {
@@ -1249,7 +1343,21 @@ body {
         &__menu {
           padding-bottom: 96px;
         }
-
+  }
+  .ourWorks__example-popup__icon {
+    margin-right: 10px;
+  }
+  .ourWorks__example-popup__body {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 680px) {
+  .ourWorks__example-popup {
+        &__img {
+          float: none;
+          width: 60%;
+        }
   }
 }
 @media (max-width: 440px) {
