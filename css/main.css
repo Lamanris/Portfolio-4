@@ -1831,6 +1831,25 @@ body {
   width: 100%;
 }
 
+.aboutCompany-swiper-button-photo {
+  bottom: 30%;
+}
+
+.aboutCompany-swiper-button-video {
+  bottom: 25%;
+}
+
+@media (max-width: 1330px) {
+  .aboutCompany-swiper-button-photo {
+    bottom: auto;
+    top: 15%;
+  }
+
+  .aboutCompany-swiper-button-video {
+    bottom: auto;
+    top: 20%;
+  }
+}
 @media (max-width: 1135px) {
   .specialityBlock__title {
     padding-top: 57px;
@@ -1858,6 +1877,7 @@ body {
 }
 .proudBlock__container {
   position: relative;
+  max-width: 1150px;
 }
 
 @media (max-width: 1330px) {

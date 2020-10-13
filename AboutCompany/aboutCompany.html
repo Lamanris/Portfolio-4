@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../slider/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href=".././img/favicon.ico">
@@ -55,7 +56,7 @@
                 <h2 class="specialityBlock__title blockTitle">Специализируемся</h2>
                 <div class="specialityBlock__twoSwitchButtons twoSwitchButtons">
                     <div class="specialityBlock__physicButton switchButtons physicButton active" id="physicButton">физическим лицам</div>
-                    <span class="servicesBlock__switchLine" id="switchLine"><img src="../img/switchLine.png" alt=""></span>
+                    <span class="servicesBlock__switchLine physic" id="switchLine"><img src="../img/switchLine.png" alt=""></span>
                     <div class="specialityBlock__juristicButton switchButtons juristicButton" id="juristicButton">юридическим лицам</div>
                 </div>
                 <div class="specialityBlock__wrapper physicWrapper active" id="physicWrapper">
@@ -164,21 +165,32 @@
         <div class="proudBlock__container container">
             <h2 class="proudBlock__title blockTitle">Гордимся</h2>
             <div class="specialityBlock__photoButton twoSwitchButtons">
-                <div class="specialityBlock__photoButton switchButtons photoButton.active">фото</div>
-                <span><img src="../img/switchLine.png" alt=""></span>
-                <div class="specialityBlock__videoButton switchButtons videoButton">видео</div>
+                <div class="specialityBlock__photoButton switchButtons photoButton active" id="photoButton">фото</div>
+                <span class="ourReviews__switchLine photo" id="ourReviews__switchLine"><img src="../img/switchLine.png" alt=""></span>
+                <div class="specialityBlock__videoButton switchButtons videoButton" id="videoButton">видео</div>
             </div>
-            <button class="swiper-button-prev aboutCompany-swiper-button-prev"></button>
-            <button class="swiper-button-next aboutCompany-swiper-button-next"></button>
-            <div class="slider-container">
-                <div class="swiper-container">
+            <button class="swiper-button-prev swiper-button-video swiper-button-prev-video aboutCompany-swiper-button-video" id="swiper-button-prev-video"></button>
+            <button class="swiper-button-next swiper-button-video swiper-button-next-video aboutCompany-swiper-button-video" id="swiper-button-next-video"></button>
+            <button class="swiper-button-prev swiper-button-photo swiper-button-prev-photo aboutCompany-swiper-button-photo active" id="swiper-button-prev-photo"></button>
+            <button class="swiper-button-next swiper-button-photo swiper-button-next-photo aboutCompany-swiper-button-photo active" id="swiper-button-next-photo"></button>
+            <div class="slider-container video-slider" id="video-slider">
+                <div class="swiper-container videoSwiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo1.png" alt=""></a></div>
-                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo2.png" alt=""></a></div>
-                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo3.png" alt=""></a></div>
-                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo1.png" alt=""></a></div>
-                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo2.png" alt=""></a></div>
-                        <div class="swiper-slide card"><a href="#"><img src="../img/review-photo3.png" alt=""></a></div>
+                        <div class="swiper-slide card"><a data-fancybox href="https://www.youtube.com/watch?v=GBmL2DZj9F8"><img src="../img/review-video.jpg" alt=""></a></div>
+                        <div class="swiper-slide card"><a data-fancybox href="https://www.youtube.com/watch?v=GBmL2DZj9F8"><img src="../img/review-video.jpg" alt=""></a></div>
+                        <div class="swiper-slide card"><a data-fancybox href="https://www.youtube.com/watch?v=GBmL2DZj9F8"><img src="../img/review-video.jpg" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container photo-slider active" id="photo-slider">
+                <div class="swiper-container photoSwiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide card swiper-slide-photo"><img src="../img/review-photo1.png" alt=""></div>
+                        <div class="swiper-slide card swiper-slide-photo"><img src="../img/review-photo2.png" alt=""></div>
+                        <div class="swiper-slide card swiper-slide-photo"><img src="../img/review-photo3.png" alt=""></div>
+                        <div class="swiper-slide card swiper-slide-photo"><img src="../img/review-photo1.png" alt=""></div>
+                        <div class="swiper-slide card swiper-slide-photo"><img src="../img/review-photo2.png" alt=""></div>
+                        <div class="swiper-slide card swiper-slide-photo"><img src="../img/review-photo3.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -250,6 +262,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="../slider/swiper-bundle.min.js"></script>
 <script src="../slider/slider.js"></script>
+<script src="../js/jquery.fancybox.min.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
