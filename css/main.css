@@ -963,19 +963,17 @@ body {
   z-index: 1;
 }
 
-.swiper-slide {
+.swiper-slide-photoVideo {
   opacity: 0.6;
   transition: all 0.8s;
-}
-.swiper-slide:hover {
-  opacity: 1;
-}
-.swiper-slide img {
-  max-width: 100%;
-}
-.swiper-slide-active {
   display: flex;
   justify-content: center;
+}
+.swiper-slide-photoVideo:hover {
+  opacity: 1;
+}
+.swiper-slide-photoVideo img {
+  max-width: 100%;
 }
 
 .ourReviews__container {
@@ -2370,4 +2368,125 @@ body {
 .contactsHtml-contactsBlock {
   background-color: #252323;
   background-image: none;
+}
+
+.ourCasesHtml-topBg {
+  background: url(".././img/ourCasesHtml-topBG.png") no-repeat;
+  background-size: cover;
+}
+
+.ourCases {
+  background-image: url("../img/ourCasesHtml-ourCasesBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ourCases__title {
+  padding-top: 66px;
+}
+.ourCases__swiper-wrapper {
+  justify-content: space-between;
+  padding-bottom: 45px;
+}
+.ourCases__swiper-slide {
+  width: 23%;
+}
+.ourCases__swiper-slide__wrapper {
+  background: linear-gradient(50.83deg, #282523 -1.4%, #2F2C29 102.27%);
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.28);
+  border-radius: 35px 3px;
+}
+.ourCases__swiper-slide__body {
+  margin-left: 39px;
+  margin-right: 23px;
+  padding-top: 41px;
+  padding-bottom: 41px;
+}
+.ourCases__swiper-slide__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #F2F2F2;
+  display: inline-block;
+}
+.ourCases__swiper-slide__title::before {
+  content: url("../img/awardIcon.svg");
+  float: right;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+.ourCases__swiper-slide__afterTitleLine {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0) 100%);
+  margin-top: 11px;
+  margin-bottom: 12px;
+}
+.ourCases__swiper-slide__miniText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+.ourCases__swiper-slide__subTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #F2F2F2;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.ourCases__swiper-slide__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.4;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.ourCases__twoSwitchButtons {
+  justify-content: left;
+}
+.ourCases__slider-juristicContainer, .ourCases__slider-physicContainer {
+  display: none;
+}
+.ourCases__slider-juristicContainer.active, .ourCases__slider-physicContainer.active {
+  display: flex;
+}
+.ourCases__swiper-button-prev, .ourCases__swiper-button-next {
+  position: static;
+  float: right;
+}
+.ourCases__swiper-button-prev::after {
+  content: url("../img/arrowLeftIcon.svg");
+  margin-right: 22px;
+}
+.ourCases__swiper-button-next::after {
+  content: url("../img/arrowRightIcon.svg");
+}
+.ourCases__buttons {
+  display: inline-block;
+  padding-bottom: 94px;
+}
+
+@media (max-width: 470px) {
+  .ourCases__swiper-button-prev, .ourCases__swiper-button-next {
+    display: none;
+  }
+
+  .ourCases__buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 328px) {
+  .ourCases__ourCases__physicButton, .ourCases__juristicButton {
+    font-size: 11px;
+  }
 }
