@@ -542,6 +542,14 @@ body {
   text-align: left;
   transition: all 0.8s;
 }
+.servicesBlock__items::before {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background-color: inherit;
+  position: absolute;
+  transition: all 0.3s;
+}
 .servicesBlock__items__content {
   padding-top: 25px;
   padding-left: 23px;
@@ -583,7 +591,11 @@ body {
 }
 .servicesBlock__items:hover {
   background: linear-gradient(120.09deg, #95803D 2.42%, #564715 107.07%);
-  border-left: 3px solid #FCFFD5;
+  background-position-y: 120%;
+  background-position-x: 100%;
+}
+.servicesBlock__items:hover::before {
+  background-color: #FCFFD5;
 }
 
 .blockTitle {
@@ -2475,6 +2487,11 @@ body {
   padding-bottom: 94px;
 }
 
+@media (max-width: 1030px) {
+  .ourCases-mainBlock__title {
+    font-size: 49px;
+  }
+}
 @media (max-width: 470px) {
   .ourCases__swiper-button-prev, .ourCases__swiper-button-next {
     display: none;
@@ -2483,6 +2500,11 @@ body {
   .ourCases__buttons {
     display: flex;
     justify-content: center;
+  }
+}
+@media (max-width: 340px) {
+  .ourCases-mainBlock__title {
+    font-size: 46px;
   }
 }
 @media (max-width: 328px) {
