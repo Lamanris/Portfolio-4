@@ -533,22 +533,35 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   margin-bottom: 30px;
-  cursor: pointer;
   position: relative;
   background-image: url("../img/servicesBlock-ellipses.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-position-y: 120%;
   text-align: left;
-  transition: all 0.8s;
+  z-index: 1;
 }
 .servicesBlock__items::before {
   content: "";
   height: 100%;
   width: 3px;
-  background-color: inherit;
+  background-color: #FCFFD5;
   position: absolute;
-  transition: all 0.3s;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.servicesBlock__items::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120.09deg, #95803D 2.42%, #564715 107.07%);
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
 }
 .servicesBlock__items__content {
   padding-top: 25px;
@@ -589,13 +602,8 @@ body {
   min-width: 307px;
   display: block;
 }
-.servicesBlock__items:hover {
-  background: linear-gradient(120.09deg, #95803D 2.42%, #564715 107.07%);
-  background-position-y: 120%;
-  background-position-x: 100%;
-}
-.servicesBlock__items:hover::before {
-  background-color: #FCFFD5;
+.servicesBlock__items:hover::after, .servicesBlock__items:hover::before {
+  opacity: 1;
 }
 
 .blockTitle {
@@ -2316,6 +2324,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 .chooseServiceBlock__switchButtons:hover {
   color: #FCFFD5;
@@ -2509,6 +2518,119 @@ body {
 }
 @media (max-width: 328px) {
   .ourCases__ourCases__physicButton, .ourCases__juristicButton {
+    font-size: 11px;
+  }
+}
+.servicesHtml-servicesTypes-topBg {
+  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+  box-shadow: inset 0 16px 19px rgba(0, 0, 0, 0.17);
+}
+
+.servicesTypes__twoSwitchButtons {
+  margin-top: 53px;
+  margin-bottom: 38px;
+}
+.servicesTypes__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.servicesTypes__item {
+  width: 22.5%;
+  background: linear-gradient(214.37deg, #302E24 9.6%, #2F2E24 108.65%);
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.28);
+  border-radius: 35px 3px;
+  margin-bottom: 51px;
+  transition: background 1s ease;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.servicesTypes__item::before {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120.09deg, #95803D 2.42%, #564715 107.07%), linear-gradient(214.37deg, #302E24 9.6%, #2F2E24 108.65%);
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.28);
+  border-radius: 35px 3px;
+  z-index: -1;
+}
+.servicesTypes__item:hover::before {
+  opacity: 1;
+}
+.servicesTypes__body {
+  margin: 37px 20px 55px 34px;
+}
+.servicesTypes__number {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FCFFD5;
+  opacity: 0.2;
+}
+.servicesTypes__line {
+  background: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0) 95%);
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 13px;
+}
+.servicesTypes__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #F2F2F2;
+  margin-bottom: 10px;
+}
+.servicesTypes__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+
+@media (max-width: 1200px) {
+  .servicesTypes__item {
+    width: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .servicesTypes__item {
+    width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .servicesTypes__twoSwitchButtons {
+    margin-top: 133px;
+  }
+}
+@media (max-width: 600px) {
+  .servicesTypes__wrapper {
+    justify-content: center;
+  }
+
+  .servicesTypes__item {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .servicesTypes__item {
+    width: 90%;
+  }
+}
+@media (max-width: 328px) {
+  .servicesTypes__physicButton, .servicesTypes__juristicButton {
     font-size: 11px;
   }
 }
