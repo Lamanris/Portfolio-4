@@ -5,6 +5,193 @@ $(document).ready(function(){
     });
 });
 
+    const inputFile = document.querySelectorAll('.sendDocs-popup__input-file');
+
+    /////////// Кнопка «Прикрепить файл» ///////////
+    inputFile.forEach(function(el) {
+        let textSelector = document.querySelector('.sendDocs-popup__input-file-button-text');
+        let fileList;
+
+        // Событие выбора файла(ов)
+        el.addEventListener('change', function (e) {
+
+            // создаём массив файлов
+            fileList = [];
+            for (let i = 0; i < el.files.length; i++) {
+                fileList.push(el.files[i]);
+            }
+
+            // вызов функции для каждого файла
+            fileList.forEach(file => {
+                uploadFile(file);
+            });
+        });
+
+        // Проверяем размер файлов и выводим название
+        const uploadFile = (file) => {
+
+            // файла <5 Мб
+            if (file.size > 5 * 1024 * 1024) {
+                alert('Файл должен быть не более 5 МБ.');
+                return;
+            }
+
+            // Показ загружаемых файлов
+            if (file && file.length > 1) {
+                if ( file.length <= 4 ) {
+                    textSelector.textContent = `Выбрано ${file.length} файла`;
+                }
+                if ( file.length > 4 ) {
+                    textSelector.textContent = `Выбрано ${file.length} файлов`;
+                }
+            } else {
+                textSelector.textContent = file.name;
+            }
+        }
+
+    });
+
+
+
+
+const popupLinks = document.querySelector('.popup-link');
+const lockPadding = document.querySelector('.lock-padding');
+
+let unlock = true;
+
+const timeout = 800;
+console.log('test1');
+if (popupLinks.length > 0 ) {
+    // popupLinks.forEach((el) => {
+    //    el.addEventListener('click', function (e) {
+    //        const popupName = el.getAttribute('href').replace('#','');
+    //        const currentPopup = document.getElementById(popupName);
+    //        popupOpen(currentPopup);
+    //        e.preventDefault();
+    //    })
+    // });
+    for (let i = 0; i < popupLinks.length; i++) {
+        const popupLink = popupLinks[i];
+        popupLink.addEventListener("click", function (e) {
+            const popupName = popupLink.getAttribute('href').replace('#','');
+            const currentPopup = document.getElementById(popupName);
+            popupOpen(currentPopup);
+            e.preventDefault();
+            console.log('test1')
+        });
+    }
+}
+
+const popupCloseIcon = document.querySelector('.close-popup');
+if (popupCloseIcon.length > 0) {
+    for (let i = 0; i < popupCloseIcon.length; i++) {
+        const el = popupCloseIcon[i];
+        el.addEventListener('click', function (e) {
+            popupClose(el.closest('.popup'));
+            e.preventDefault();
+        })
+    }
+    // popupCloseIcon.forEach((el) => {
+    //     el.addEventListener('click', function (e) {
+    //         popupClose(el.closest('.popup'));
+    //         e.preventDefault();
+    //     })
+    // })
+}
+
+function popupOpen(currentPopup) {
+    if (currentPopup && unlock) {
+        const popupActive = document.querySelector('.popup.open');
+        if (popupActive) {
+            popupClose(popupActive,false);
+        } else {
+            bodyLock();
+        }
+        currentPopup.classList.add('open');
+        currentPopup.addEventListener("click", function (e) {
+            if (!e.target.closest('.popup__content')) {
+                popupClose(e.target.closest('.popup'))
+            }
+        })
+    }
+}
+
+function popupClose(popupActive, doUnlock = true) {
+    if (unlock) {
+        popupActive.classList.remove('open');
+        if (doUnlock) {
+            bodyUnlock();
+        }
+    }
+}
+
+function bodyLock() {
+    const lockPaddingValue = window.innerWidth - document.querySelector('.container').offsetWidth + 'px';
+
+    if (lockPadding.length > 0) {
+        for (let i = 0; i < lockPadding.length; i++) {
+            const el = lockPadding[i];
+            el.style.paddingRight = lockPaddingValue;
+        }
+        // lockPadding.forEach((el) => {
+        //     el.style.paddingRight = lockPaddingValue
+        // })
+    }
+        body.style.paddingRight = lockPaddingValue;
+        body.classList.add('lock');
+
+        unlock = false;
+        setTimeout(function () {
+            unlock = true;
+        },timeout);
+}
+
+function bodyUnlock() {
+    setTimeout(function () {
+        if (lockPadding.length > 0 ) {
+
+        for (let i = 0; i < lockPadding.length; i++) {
+            const el = lockPadding[i];
+            el.style.paddingRight = '0px'
+        }
+
+        // lockPadding.forEach((el) => {
+        //     el.style.paddingRight = '0px';
+        // })
+        }
+        body.style.paddingRight = '0px';
+        body.classList.remove('lock')
+    }, timeout);
+
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout)
+}
+
+// document.addEventListener('keydown', function (e) {
+//    if (e.which === 27) {
+//        const popupActive = document.querySelector('.popup.open');
+//        popupClose(popupActive)
+//    }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let physicWrapper = document.getElementById('physicWrapper');
 let juristicWrapper = document.getElementById('juristicWrapper');
 let physicButton = document.getElementById('physicButton');
@@ -103,7 +290,6 @@ for (let i = 0; i < ourWorks__menuItem.length; i++) {
         }
     })
 }
-console.log(document.body.classList);
 
 
 
