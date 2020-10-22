@@ -430,7 +430,7 @@ body.lock {
   overflow: hidden;
 }
 
-.sendDocs-popup {
+.all-popup {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -443,41 +443,37 @@ body.lock {
   overflow-y: auto;
   overflow-x: hidden;
 }
-.sendDocs-popup.open {
+.all-popup.open {
   opacity: 1;
   visibility: visible;
 }
-.sendDocs-popup.open .sendDocs-popup__content {
+.all-popup.open .all-popup__content {
   transform: translate(0px, 0px);
   opacity: 1;
 }
-.sendDocs-popup__body {
+.all-popup__body {
   min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px 20px;
 }
-.sendDocs-popup__content {
-  max-width: 940px;
+.all-popup__content {
   width: 100%;
   background: rgba(37, 37, 37, 0.98);
   box-shadow: 11px 11px 34px rgba(0, 0, 0, 0.75);
   border-radius: 50px 0;
-  padding-left: 78px;
-  padding-top: 65px;
-  position: relative;
-  padding-bottom: 75px;
   transition: all 0.8s ease 0s;
+  position: relative;
   opacity: 0;
   transform: translate(0px, -100%);
 }
-.sendDocs-popup__close {
+.all-popup__close {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-.sendDocs-popup__title {
+.all-popup__title {
   font-style: normal;
   font-weight: normal;
   font-size: 23px;
@@ -485,7 +481,7 @@ body.lock {
   color: #F2F2F2;
   margin-bottom: 33px;
 }
-.sendDocs-popup__miniText {
+.all-popup__miniText {
   font-style: normal;
   font-weight: normal;
   font-size: 9px;
@@ -494,16 +490,16 @@ body.lock {
   opacity: 0.4;
   max-width: 254px;
 }
-.sendDocs-popup__input {
+.all-popup__input {
   border-bottom: 1px solid #F2F2F2;
   margin-bottom: 16px;
   max-width: 238px;
   opacity: 0.4;
 }
-.sendDocs-popup__input-highlighted {
+.all-popup__input-highlighted {
   opacity: 0.8;
 }
-.sendDocs-popup__input input {
+.all-popup__input input {
   background: inherit;
   outline: none;
   border: none;
@@ -514,14 +510,46 @@ body.lock {
   font-size: 14px;
   line-height: 127.4%;
   color: #E0E0E0;
+  width: 90%;
 }
-.sendDocs-popup__input input::-webkit-input-placeholder {
+.all-popup__input input::-webkit-input-placeholder {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 127.4%;
   color: #E0E0E0;
   opacity: 0.5;
+}
+.all-popup__submitButton input {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 127.4%;
+  color: #FCFFD5;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid rgba(252, 255, 213, 0.5);
+  background: inherit;
+  outline: none;
+  opacity: 0.7;
+  transition: all 0.8s;
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
+}
+.all-popup__submitButton input:hover {
+  opacity: 1;
+}
+
+.sendDocs-popup__content {
+  max-width: 940px;
+  padding-left: 78px;
+  padding-top: 65px;
+  padding-bottom: 75px;
+}
+.sendDocs-popup__submitButton {
+  margin-top: -40px;
+  margin-bottom: 24px;
 }
 .sendDocs-popup__blocks {
   display: flex;
@@ -583,30 +611,6 @@ body.lock {
   color: #E0E0E0;
   opacity: 0.3;
 }
-.sendDocs-popup__submitButton {
-  margin-top: -40px;
-  margin-bottom: 24px;
-}
-.sendDocs-popup__submitButton input {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 127.4%;
-  color: #FCFFD5;
-  padding-bottom: 5px;
-  border: none;
-  border-bottom: 1px solid rgba(252, 255, 213, 0.5);
-  background: inherit;
-  outline: none;
-  opacity: 0.7;
-  transition: all 0.8s;
-  cursor: pointer;
-  padding-left: 0;
-  padding-right: 0;
-}
-.sendDocs-popup__submitButton input:hover {
-  opacity: 1;
-}
 
 input[type=number] {
   -moz-appearance: textfield;
@@ -615,6 +619,23 @@ input[type=number] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.getConsult-popup__content {
+  max-width: 388px;
+  padding-top: 71px;
+  padding-bottom: 84px;
+  text-align: center;
+}
+.getConsult-popup__submitButton {
+  margin-top: 31px;
+  margin-bottom: 19px;
+}
+.getConsult-popup__miniText {
+  margin: 0 auto;
+}
+.getConsult-popup__input {
+  margin: 0 auto 16px;
 }
 
 @media (max-width: 1010px) {
@@ -703,6 +724,10 @@ input::-webkit-inner-spin-button {
   .mainBlock__getConsultButton {
     font-size: 15px;
     padding: 14px 13px 15px 14px;
+  }
+
+  .getConsult-popup__title {
+    font-size: 22px;
   }
 }
 .servicesBlock {
