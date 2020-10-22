@@ -2649,6 +2649,8 @@ input::-webkit-inner-spin-button {
 }
 .ourCases__swiper-slide {
   width: 23%;
+  text-decoration: none;
+  cursor: pointer;
 }
 .ourCases__swiper-slide__wrapper {
   background: linear-gradient(50.83deg, #282523 -1.4%, #2F2C29 102.27%);
@@ -2735,9 +2737,132 @@ input::-webkit-inner-spin-button {
   padding-bottom: 94px;
 }
 
+.ourCases-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ourCases-popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.ourCases-popup.open .ourCases-popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.ourCases-popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+.ourCases-popup__content {
+  max-width: 982px;
+  padding-left: 68px;
+  width: 100%;
+  background: rgba(48, 44, 44, 0.9);
+  border-radius: 35px 0;
+  transition: all 0.8s ease 0s;
+  position: relative;
+  opacity: 0;
+  transform: translate(0px, -100%);
+  display: flex;
+  justify-content: space-between;
+}
+.ourCases-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 46%;
+}
+.ourCases-popup__img {
+  width: 37%;
+}
+.ourCases-popup__img img {
+  width: 100%;
+}
+.ourCases-popup__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FCFFD5;
+  margin-bottom: 11px;
+  padding-top: 59px;
+}
+.ourCases-popup__underTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+.ourCases-popup__subTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #F2F2F2;
+  margin-bottom: 7px;
+}
+.ourCases-popup__subTitle1 {
+  margin-top: 39px;
+}
+.ourCases-popup__subTitle2 {
+  margin-top: 27px;
+}
+.ourCases-popup__subTitle3 {
+  margin-top: 18px;
+}
+.ourCases-popup__textBox {
+  width: 55%;
+  padding-bottom: 69px;
+}
+.ourCases-popup__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #F2F2F2;
+  opacity: 0.5;
+  max-width: 408px;
+  display: inline-block;
+}
+
 @media (max-width: 1030px) {
   .ourCases-mainBlock__title {
     font-size: 49px;
+  }
+}
+@media (max-width: 600px) {
+  .ourCases-popup__content {
+    flex-direction: column;
+  }
+  .ourCases-popup__close {
+    right: 20px;
+  }
+  .ourCases-popup__textBox {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .ourCases-popup__img {
+    width: 80%;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .ourCases-popup__content {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (max-width: 470px) {
@@ -2748,6 +2873,12 @@ input::-webkit-inner-spin-button {
   .ourCases__buttons {
     display: flex;
     justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .ourCases-popup__content {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 340px) {

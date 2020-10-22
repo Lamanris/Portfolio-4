@@ -2767,6 +2767,8 @@ input::-webkit-inner-spin-button {
       }
       &__swiper-slide{
         width: 23%;
+        text-decoration: none;
+        cursor: pointer;
             &__wrapper {
               background: linear-gradient(50.83deg, #282523 -1.4%, #2F2C29 102.27%);
               box-shadow: 0 4px 13px rgba(0, 0, 0, 0.28);
@@ -2859,9 +2861,138 @@ input::-webkit-inner-spin-button {
         padding-bottom: 94px;
       }
 }
+
+.ourCases-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+
+        & .ourCases-popup__content {
+          transform: translate(0px, 0px);
+          opacity: 1;
+        }
+  }
+  &__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+  &__content {
+    max-width: 982px;
+    padding-left: 68px;
+    width: 100%;
+    background: rgba(48, 44, 44, 0.9);;
+    border-radius: 35px 0;
+    transition: all 0.8s ease 0s;
+    position: relative;
+    opacity: 0;
+    transform: translate(0px, -100%);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 46%;
+  }
+  &__img {
+    width: 37%;
+    img {
+      width: 100%;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FCFFD5;
+    margin-bottom: 11px;
+    padding-top: 59px;
+  }
+  &__underTitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    opacity: 0.4;
+  }
+  &__subTitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #F2F2F2;
+    margin-bottom: 7px;
+        &1 {
+          margin-top: 39px;
+        }
+        &2 {
+          margin-top: 27px;
+        }
+        &3 {
+          margin-top: 18px;
+        }
+  }
+  &__textBox {
+    width: 55%;
+    padding-bottom: 69px;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #F2F2F2;
+    opacity: 0.5;
+    max-width: 408px;
+    display: inline-block;
+  }
+}
+
 @media (max-width: 1030px) {
   .ourCases-mainBlock__title {
     font-size: 49px;
+  }
+}
+@media (max-width: 600px) {
+  .ourCases-popup {
+        &__content {
+          flex-direction: column;
+        }
+        &__close {
+          right: 20px;
+        }
+        &__textBox {
+          width: 100%;
+          padding-bottom: 20px;
+        }
+        &__img {
+          width: 80%;
+          padding-bottom: 30px;
+        }
+  }
+}
+@media (max-width: 550px) {
+  .ourCases-popup {
+    &__content {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 }
 @media (max-width: 470px) {
@@ -2871,6 +3002,14 @@ input::-webkit-inner-spin-button {
   .ourCases__buttons {
     display: flex;
     justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .ourCases-popup {
+    &__content {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 @media (max-width: 340px) {
