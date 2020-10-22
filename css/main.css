@@ -1349,6 +1349,7 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   padding-top: 19px;
   padding-bottom: 19px;
+  text-decoration: none;
 }
 .ourWorks__menuItem.active {
   opacity: 1;
@@ -1427,31 +1428,50 @@ input::-webkit-inner-spin-button {
 }
 
 .ourWorks__example-popup {
-  display: none;
-}
-.ourWorks__example-popup__overlay {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: #252322;
-  border-radius: 50px 0;
-  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-.ourWorks__example-popup__icon {
-  position: absolute;
-  right: 55px;
-  margin-left: 50px;
-  cursor: pointer;
+.ourWorks__example-popup.open {
+  opacity: 1;
+  visibility: visible;
 }
-.ourWorks__example-popup__wrapper {
-  position: relative;
+.ourWorks__example-popup.open .ourWorks__example-popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .ourWorks__example-popup__body {
-  max-width: 600px;
-  margin-left: 56px;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+.ourWorks__example-popup__content {
+  max-width: 769px;
   padding-bottom: 77px;
+  padding-left: 56px;
+  padding-top: 55px;
+  width: 100%;
+  background: rgba(37, 35, 34, 0.96);
+  border-radius: 50px 0;
+  transition: all 0.8s ease 0s;
+  position: relative;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+.ourWorks__example-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .ourWorks__example-popup__img {
   width: 38%;
@@ -1464,8 +1484,8 @@ input::-webkit-inner-spin-button {
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
-  margin-top: 55px;
   margin-bottom: 34px;
+  max-width: 423px;
 }
 .ourWorks__example-popup__subTitle {
   font-style: normal;
@@ -1541,15 +1561,6 @@ input::-webkit-inner-spin-button {
     background: none;
     margin-top: 72px;
   }
-
-  .ourWorks__example-popup.active {
-    display: block;
-    overflow: auto;
-  }
-
-  body.ourWorks-popupLock {
-    overflow: hidden;
-  }
 }
 @media (max-width: 720px) {
   .ourWorks__example-popup__icon {
@@ -1568,19 +1579,31 @@ input::-webkit-inner-spin-button {
     padding-bottom: 96px;
   }
 
-  .ourWorks__example-popup__icon {
-    margin-right: 10px;
-  }
-
-  .ourWorks__example-popup__body {
-    margin-left: 40px;
-    margin-right: 10px;
+  .ourWorks__example-popup__subTitle {
+    margin-top: 34px;
   }
 }
 @media (max-width: 680px) {
   .ourWorks__example-popup__img {
     float: none;
     width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .ourWorks__example-popup__content {
+    padding: 59px 15px 69px;
+  }
+
+  .ourWorks__example-popup__title {
+    margin-bottom: 24px;
+  }
+
+  .ourWorks__example-popup__readMoreButton {
+    margin-top: 6px;
+  }
+
+  .ourWorks__example-popup__subTitle {
+    margin-top: 26px;
   }
 }
 @media (max-width: 440px) {
@@ -2750,6 +2773,14 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.servicesTypes__wrapper.active {
+  visibility: visible;
+  position: static;
 }
 .servicesTypes__item {
   width: 22.5%;
@@ -2761,6 +2792,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  text-decoration: none;
 }
 .servicesTypes__item::before {
   content: "";
@@ -2815,6 +2847,98 @@ input::-webkit-inner-spin-button {
   color: #FFFFFF;
   opacity: 0.4;
 }
+.servicesTypes__getConsultButton {
+  margin-top: 21px;
+}
+
+.servicesTypes-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.servicesTypes-popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.servicesTypes-popup.open .servicesTypes-popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.servicesTypes-popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+.servicesTypes-popup__content {
+  max-width: 876px;
+  padding-left: 66px;
+  width: 100%;
+  background: linear-gradient(214.37deg, #2D2B23 9.6%, #292923 108.65%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.33);
+  border-radius: 35px 0;
+  transition: all 0.8s ease 0s;
+  position: relative;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+.servicesTypes-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.servicesTypes-popup__box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.servicesTypes-popup__imgBox {
+  width: 40%;
+}
+.servicesTypes-popup__textBox {
+  padding-bottom: 82px;
+  width: 50%;
+}
+.servicesTypes-popup__img img {
+  width: 100%;
+}
+.servicesTypes-popup__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FCFFD5;
+  display: inline-block;
+  padding-top: 64px;
+}
+.servicesTypes-popup__title::after {
+  content: "";
+  background: linear-gradient(90deg, #FCFFD4 0%, #2B2A22 100%);
+  display: block;
+  height: 1px;
+  max-width: 208px;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+.servicesTypes-popup__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.4;
+  max-width: 436px;
+  display: inline-block;
+}
 
 @media (max-width: 1200px) {
   .servicesTypes__item {
@@ -2831,6 +2955,19 @@ input::-webkit-inner-spin-button {
     margin-top: 133px;
   }
 }
+@media (max-width: 700px) {
+  .servicesTypes-popup__box {
+    flex-direction: column-reverse;
+  }
+
+  .servicesTypes-popup__imgBox {
+    display: none;
+  }
+
+  .servicesTypes-popup__textBox {
+    width: 100%;
+  }
+}
 @media (max-width: 600px) {
   .servicesTypes__wrapper {
     justify-content: center;
@@ -2839,10 +2976,25 @@ input::-webkit-inner-spin-button {
   .servicesTypes__item {
     width: 80%;
   }
+
+  .servicesTypes-popup__content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (max-width: 400px) {
   .servicesTypes__item {
     width: 90%;
+  }
+
+  .servicesTypes-popup__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .servicesTypes__getConsultButton {
+    font-size: 12px;
   }
 }
 @media (max-width: 328px) {

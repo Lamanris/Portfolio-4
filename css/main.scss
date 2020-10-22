@@ -1368,6 +1368,7 @@ input::-webkit-inner-spin-button {
               justify-content: center;
               padding-top: 19px;
               padding-bottom: 19px;
+              text-decoration: none;
                   &.active {
                     opacity: 1;
                     color: #FCFFD5;
@@ -1447,80 +1448,103 @@ input::-webkit-inner-spin-button {
         max-width: 270px;
       }
 }
+
 .ourWorks__example-popup {
-  display: none;
-      &__overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #252322;
-        border-radius: 50px 0;
-        z-index: 100;
-      }
-      &__icon {
-        position: absolute;
-        right: 55px;
-        margin-left: 50px;
-        cursor: pointer;
-      }
-      &__wrapper {
-        position: relative;
-      }
-      &__body {
-        max-width: 600px;
-        margin-left: 56px;
-        padding-bottom: 77px;
-      }
-      &__img {
-          width: 38%;
-          float: left;
-          margin-right: 27px;
-      }
-      &__title {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 24px;
-        color: #FFFFFF;
-        margin-top: 55px;
-        margin-bottom: 34px;
-      }
-      &__subTitle {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        color: #FFFFFF;
-        margin-bottom: 11px;
-      }
-      &__text {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        color: #FFFFFF;
-        opacity: 0.7;
-      }
-      &__readMoreButton {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        text-decoration-line: underline;
-        color: #FFFFFF;
-        opacity: 0.95;
-        transition: all .8s;
-        cursor: pointer;
-        display: block;
-        margin-top: 14px;
-        margin-bottom: 29px;
-        &:hover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+      &.open {
+        opacity: 1;
+        visibility: visible;
+
+        & .ourWorks__example-popup__content {
+          transform: translate(0px, 0px);
           opacity: 1;
         }
       }
+  &__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+  &__content {
+    max-width: 769px;
+    padding-bottom: 77px;
+    padding-left: 56px;
+    padding-top: 55px;
+    width: 100%;
+    background: rgba(37, 35, 34,0.96);
+    border-radius: 50px 0;
+    transition: all 0.8s ease 0s;
+    position: relative;
+    opacity: 0;
+    transform: translate(0px, -100%);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &__img {
+    width: 38%;
+    float: left;
+    margin-right: 27px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 34px;
+    max-width: 423px;
+  }
+  &__subTitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-bottom: 11px;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    opacity: 0.7;
+  }
+  &__readMoreButton {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    opacity: 0.95;
+    transition: all .8s;
+    cursor: pointer;
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 29px;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
+
 @media (max-width: 1030px){
   .ourWorks__menuItem {
     font-size: 14px;
@@ -1566,16 +1590,8 @@ input::-webkit-inner-spin-button {
       margin-top: 72px;
     }
   }
-  .ourWorks__example-popup {
-    &.active {
-      display: block;
-      overflow: auto;
-    }
-  }
-  body.ourWorks-popupLock {
-    overflow: hidden;
-  }
 }
+
 @media (max-width: 720px) {
   .ourWorks__example-popup__icon {
     position: static;
@@ -1594,12 +1610,11 @@ input::-webkit-inner-spin-button {
           padding-bottom: 96px;
         }
   }
-  .ourWorks__example-popup__icon {
-    margin-right: 10px;
+  .ourWorks__example-popup__subTitle {
+    margin-top: 34px;
   }
   .ourWorks__example-popup__body {
-    margin-left: 40px;
-    margin-right: 10px;
+
   }
 }
 @media (max-width: 680px) {
@@ -1608,6 +1623,20 @@ input::-webkit-inner-spin-button {
           float: none;
           width: 60%;
         }
+  }
+}
+@media (max-width: 500px) {
+  .ourWorks__example-popup__content {
+    padding: 59px 15px 69px;
+  }
+  .ourWorks__example-popup__title {
+    margin-bottom: 24px;
+  }
+  .ourWorks__example-popup__readMoreButton {
+    margin-top: 6px;
+  }
+  .ourWorks__example-popup__subTitle {
+    margin-top: 26px;
   }
 }
 @media (max-width: 440px) {
@@ -2870,6 +2899,14 @@ input::-webkit-inner-spin-button {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+            &.active {
+              visibility: visible;
+              position: static;
+            }
       }
       &__item {
         width: 22.5%;
@@ -2881,6 +2918,7 @@ input::-webkit-inner-spin-button {
         position: relative;
         z-index: 1;
         cursor: pointer;
+        text-decoration: none;
             &::before {
               content: "";
               display: block;
@@ -2935,7 +2973,105 @@ input::-webkit-inner-spin-button {
         color: #FFFFFF;
         opacity: 0.4;
       }
+      &__getConsultButton {
+        margin-top: 21px;
+      }
 }
+.servicesTypes-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+
+    & .servicesTypes-popup__content {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+  &__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+  &__content {
+    max-width: 876px;
+    padding-left: 66px;
+    width: 100%;
+    background: linear-gradient(214.37deg, #2D2B23 9.6%, #292923 108.65%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.33);
+    border-radius: 35px 0;
+    transition: all 0.8s ease 0s;
+    position: relative;
+    opacity: 0;
+    transform: translate(0px, -100%);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  &__imgBox {
+    width: 40%;
+  }
+  &__textBox {
+    padding-bottom: 82px;
+    width: 50%;
+  }
+  &__img {
+        img {
+          width: 100%;
+        }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color:  #FCFFD5;
+    display: inline-block;
+    padding-top: 64px;
+        &::after {
+          content: '';
+          background: linear-gradient(90deg, #FCFFD4 0%, #2B2A22 100%);
+          display: block;
+          height: 1px;
+          max-width: 208px;
+          margin-top: 12px;
+          margin-bottom: 40px;
+        }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    opacity: 0.4;
+    max-width: 436px;
+    display: inline-block;
+
+  }
+}
+
 @media (max-width: 1200px) {
   .servicesTypes__item {
     width: 30%;
@@ -2951,6 +3087,17 @@ input::-webkit-inner-spin-button {
     margin-top: 133px;
   }
 }
+@media (max-width: 700px) {
+  .servicesTypes-popup__box {
+    flex-direction: column-reverse;
+  }
+  .servicesTypes-popup__imgBox {
+    display: none;
+  }
+  .servicesTypes-popup__textBox {
+    width: 100%;
+  }
+}
 @media (max-width: 600px) {
   .servicesTypes__wrapper {
     justify-content: center;
@@ -2958,10 +3105,23 @@ input::-webkit-inner-spin-button {
   .servicesTypes__item {
     width: 80%;
   }
+  .servicesTypes-popup__content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (max-width: 400px) {
   .servicesTypes__item {
     width: 90%;
+  }
+  .servicesTypes-popup__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .servicesTypes__getConsultButton {
+    font-size: 12px;
   }
 }
 @media (max-width: 328px) {

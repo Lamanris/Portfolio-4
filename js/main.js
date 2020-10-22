@@ -54,6 +54,28 @@ $(document).ready(function(){
 
 
 
+let ourWorks__menuItem = document.querySelectorAll('.ourWorks__menuItem');
+let ourWorks__example = document.querySelectorAll('.ourWorks__example');
+
+for (let i = 0; i < ourWorks__menuItem.length; i++) {
+    ourWorks__menuItem[i].addEventListener('click', function () {
+        if (!(this.classList.contains('active'))) {
+            for (let i = 0; i < ourWorks__menuItem.length; i++) {
+                ourWorks__menuItem[i].classList.remove('active');
+                ourWorks__example[i].classList.remove('active');
+            }
+        }
+        this.classList.add('active');
+        ourWorks__example[i].classList.add('active');
+    });
+}
+
+if (document.documentElement.clientWidth <= 950) {
+    ourWorks__menuItem.forEach((el) => el.classList.toggle('popup-link'))
+}
+
+
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const lockPadding = document.querySelectorAll('.lock-padding');
 const body = document.querySelector('body');
@@ -69,6 +91,7 @@ if (popupLinks.length > 0 ) {
            const currentPopup = document.getElementById(popupName);
            popupOpen(currentPopup);
            e.preventDefault();
+           console.log('2')
        })
     });
 }
@@ -218,35 +241,7 @@ videoButton.addEventListener('click', function () {
     }
 });
 
-let ourWorks__menuItem = document.getElementsByClassName('ourWorks__menuItem');
-let ourWorks__example = document.getElementsByClassName('ourWorks__example');
-let ourWorks__examplePopup = document.getElementsByClassName('ourWorks__example-popup');
-let ourWorks__examplePopupClose = document.getElementsByClassName('ourWorks__example-popup__icon');
-for (let i = 0; i < ourWorks__menuItem.length; i++) {
-    ourWorks__menuItem[i].addEventListener('click', function () {
-        if (!(this.classList.contains('active'))) {
-            for (let i = 0; i < ourWorks__menuItem.length; i++) {
-            ourWorks__menuItem[i].classList.remove('active');
-            ourWorks__example[i].classList.remove('active');
-            ourWorks__examplePopup[i].classList.remove('active');
-        }
-        }
-        this.classList.add('active');
-        ourWorks__example[i].classList.add('active');
-        ourWorks__examplePopup[i].classList.add('active');
-        document.body.classList.add('ourWorks-popupLock')
-    });
-}
 
-for (let i = 0; i < ourWorks__menuItem.length; i++) {
-    ourWorks__examplePopupClose[i].addEventListener('click', function () {
-        for (i = 0; i < ourWorks__menuItem.length; i++) {
-            ourWorks__examplePopup[i].classList.remove('active');
-            ourWorks__menuItem[i].classList.remove('active');
-            document.body.classList.remove('ourWorks-popupLock');
-        }
-    })
-}
 
 
 
