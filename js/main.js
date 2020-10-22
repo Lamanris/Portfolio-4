@@ -62,7 +62,6 @@ let unlock = true;
 
 const timeout = 100;
 
-console.log('test1');
 if (popupLinks.length > 0 ) {
     popupLinks.forEach((el) => {
        el.addEventListener('click', function (e) {
@@ -150,22 +149,6 @@ document.addEventListener('keydown', function (e) {
        popupClose(popupActive)
    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let physicWrapper = document.getElementById('physicWrapper');
 let juristicWrapper = document.getElementById('juristicWrapper');

@@ -12,50 +12,67 @@
     <title>Контакты</title>
 </head>
 <body>
-<div class="servicesHtml-topBg">
-    <header class="header">
-        <div class="header__container container">
-            <div class="header__leftSide">
-                <a href="../index.html" class="header__logo logo"><p>Право <span>сознание</span></p></a>
-                <div class="header__address address">Тюмень,<br> ул. Водопроводная, 6, офис 110</div>
+<div class="wrapper">
+    <div class="servicesHtml-topBg">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__leftSide">
+                    <a href="../index.html" class="header__logo logo"><p>Право <span>сознание</span></p></a>
+                    <div class="header__address address">Тюмень,<br> ул. Водопроводная, 6, офис 110</div>
+                </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <div class="header__rightSide">
+                    <nav class="header__menu">
+                        <a class="header__menu__item" href=".././AboutCompany/aboutCompany.html">О компании</a>
+                        <a class="header__menu__item" href=".././ServicesHtml/servicesHtml.html">Услуги</a>
+                        <a class="header__menu__item" href=".././ourCases/ourCasesHtml.html">Кейсы</a>
+                        <a class="header__menu__item header__menu__item-highlighted" href="contactsHtml.html">Контакты</a>
+                    </nav>
+                    <div class="header__contactInfo">
+                        <div class="header__number number">+7 3452 605-855</div>
+                        <div class="header__mail mail">info@pravo-72.ru</div>
+                    </div>
+                </div>
             </div>
-            <div class="header__burger">
-                <span></span>
-            </div>
-            <div class="header__rightSide">
-                <nav class="header__menu">
-                    <a class="header__menu__item" href=".././AboutCompany/aboutCompany.html">О компании</a>
-                    <a class="header__menu__item" href=".././ServicesHtml/servicesHtml.html">Услуги</a>
-                    <a class="header__menu__item" href=".././ourCases/ourCasesHtml.html">Кейсы</a>
-                    <a class="header__menu__item header__menu__item-highlighted" href="contactsHtml.html">Контакты</a>
-                </nav>
-                <div class="header__contactInfo">
-                    <div class="header__number number">+7 3452 605-855</div>
-                    <div class="header__mail mail">info@pravo-72.ru</div>
+        </header>
+
+        <div class="mainBLock">
+            <div class="mainBlock__container container">
+                <div class="mainBlock__textBox servicesHtml-mainBlock__textBox">
+                    <div class="mainBlock__title servicesHtml-mainBlock__title">Наши контакты</div>
+                    <a href="#getConsult-popup" class="mainBlock__getConsultButton getConsultButton servicesHtml-mainBlock__getConsultButton popup-link"><span>Получить бесплатную консультацию</span></a>
+                </div>
+                <div class="mainBlock__imgBox servicesHtml-mainBlock__imgBox">
+                    <div class="mainBlock__img servicesHtml-mainBlock__img"><img src="../img/servicesHtml-mainBlock.png" alt=""></div>
+                </div>
+                <div class="mainBlock__socNetwork servicesHtml-mainBlock__socNetwork">
+                    <span class="mainBlock__socNetwork-line1 servicesHtml-mainBlock__socNetwork-line1"></span>
+                    <a href="#"><img src="../img/instaIcon.svg" alt=""></a>
+                    <a href="#"><img src="../img/facebookIcon.svg" alt=""></a>
+                    <a href="#"><img src="../img/vkIcon.svg" alt=""></a>
+                    <span class="mainBlock__socNetwork-line2 servicesHtml-mainBlock__socNetwork-line2"></span>
                 </div>
             </div>
         </div>
-    </header>
-
-    <div class="mainBLock">
-        <div class="mainBlock__container container">
-            <div class="mainBlock__textBox servicesHtml-mainBlock__textBox">
-                <div class="mainBlock__title servicesHtml-mainBlock__title">Наши контакты</div>
-                <a href="#" class="mainBlock__getConsultButton getConsultButton servicesHtml-mainBlock__getConsultButton"><span>Получить бесплатную консультацию</span></a>
-            </div>
-            <div class="mainBlock__imgBox servicesHtml-mainBlock__imgBox">
-                <div class="mainBlock__img servicesHtml-mainBlock__img"><img src="../img/servicesHtml-mainBlock.png" alt=""></div>
-            </div>
-            <div class="mainBlock__socNetwork servicesHtml-mainBlock__socNetwork">
-                <span class="mainBlock__socNetwork-line1 servicesHtml-mainBlock__socNetwork-line1"></span>
-                <a href="#"><img src="../img/instaIcon.svg" alt=""></a>
-                <a href="#"><img src="../img/facebookIcon.svg" alt=""></a>
-                <a href="#"><img src="../img/vkIcon.svg" alt=""></a>
-                <span class="mainBlock__socNetwork-line2 servicesHtml-mainBlock__socNetwork-line2"></span>
+        <div class="getConsult-popup popup all-popup" id="getConsult-popup">
+            <div class="getConsult-popup__body all-popup__body">
+                <div class="getConsult-popup__content popup__content all-popup__content">
+                    <a href="#" class="getConsult-popup__close close-popup all-popup__close"><img src="../img/ourWorks-popup.svg" alt=""></a>
+                    <h3 class="getConsult-popup__title all-popup__title">Бесплатная консультация</h3>
+                    <form action="#">
+                        <div class="getConsult-popup__input all-popup__input all-popup__input-highlighted"><input placeholder="Алексей" type="text" required></div>
+                        <div class="getConsult-popup__input all-popup__input"><input placeholder="Телефон" type="number" required></div>
+                        <div class="getConsult-popup__submitButton all-popup__submitButton"><input type="submit" value="отправить"></div>
+                        <div class="getConsult-popup__miniText all-popup__miniText">нажимая на кнопку отправить я соглашаюсь на обработку своих персональных данных в соответсвии с ФЗ №152</div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="contacts contactsHtml-contactsBlock">
     <h2 class="contacts__title blockTitle">Мы можем помочь</h2>
