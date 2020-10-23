@@ -5,6 +5,12 @@ body {
   max-width: 1170px;
   margin: 0 auto;
 }
+*:focus {
+  outline: none !important;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 @media (max-width: 1220px) {
   .container {
     padding-left: 25px;
@@ -864,16 +870,22 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 .physicWrapper {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  display: flex;
       &.active {
-        display: flex;
+        position: static;
+        visibility: visible;
       }
 }
 .juristicWrapper {
-  display: none;
-      &.active {
-        display: flex;
-      }
+  position: absolute;
+  visibility: hidden;
+  display: flex;
+  &.active {
+    position: static;
+    visibility: visible;
+  }
 }
 .twoSwitchButtons {
   display: flex;
@@ -899,7 +911,7 @@ input::-webkit-inner-spin-button {
           &.physic {
                 img {
                   transform: scale(-1,1);
-                  transition: all 1s;
+                  transition: all 1.2s;
                 }
                 &::after {
                   left: 0;
@@ -1275,7 +1287,7 @@ input::-webkit-inner-spin-button {
   &.photo {
         img {
           transform: scale(-1,2);
-          transition: all 1s;
+          transition: all 1.2s;
         }
         &::after {
           left: 0;
@@ -1291,7 +1303,6 @@ input::-webkit-inner-spin-button {
   }
 }
 .swiper-slide-photo {
-
       img {
         border-radius: 50px 0;
             &:hover {

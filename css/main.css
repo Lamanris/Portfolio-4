@@ -7,6 +7,14 @@ body {
   margin: 0 auto;
 }
 
+*:focus {
+  outline: none !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media (max-width: 1220px) {
   .container {
     padding-left: 25px;
@@ -859,17 +867,23 @@ input::-webkit-inner-spin-button {
 }
 
 .physicWrapper {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  display: flex;
 }
 .physicWrapper.active {
-  display: flex;
+  position: static;
+  visibility: visible;
 }
 
 .juristicWrapper {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  display: flex;
 }
 .juristicWrapper.active {
-  display: flex;
+  position: static;
+  visibility: visible;
 }
 
 .twoSwitchButtons {
@@ -897,7 +911,7 @@ input::-webkit-inner-spin-button {
 }
 .twoSwitchButtons span.physic img {
   transform: scale(-1, 1);
-  transition: all 1s;
+  transition: all 1.2s;
 }
 .twoSwitchButtons span.physic::after {
   left: 0;
@@ -1256,7 +1270,7 @@ input::-webkit-inner-spin-button {
 
 .ourReviews__switchLine.photo img {
   transform: scale(-1, 2);
-  transition: all 1s;
+  transition: all 1.2s;
 }
 .ourReviews__switchLine.photo::after {
   left: 0;
