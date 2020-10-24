@@ -1123,7 +1123,6 @@ input::-webkit-inner-spin-button {
   .ourTeam__wrapper {
     background-position: center top;
     background-size: 69%;
-    height: 100vh;
   }
 }
 @media (max-width: 940px) {
@@ -1132,10 +1131,7 @@ input::-webkit-inner-spin-button {
   }
   .ourTeam__img {
     max-width: 50%;
-    position: absolute;
-    left: 24%;
-    bottom: -10%;
-    margin-bottom: 0;
+    margin-bottom: -50px;
   }
   .ourTeam__wrapper {
     background-size: 70%;
@@ -1148,7 +1144,7 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 800px) {
   .ourTeam__img {
-    max-width: 60%;
+    max-width: 55%;
     left: 18%;
   }
 }
@@ -1157,8 +1153,8 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
   }
   .ourTeam__img {
-    max-width: 75%;
-    left: 10%;
+    max-width: 90%;
+    margin-left: 3%;
   }
   .ourTeam__wrapper {
     background-position: bottom;
@@ -1180,27 +1176,6 @@ input::-webkit-inner-spin-button {
   }
   .ourTeam__title {
     margin-bottom: 45px;
-  }
-}
-@media (max-width: 500px) {
-  .ourTeam__img {
-    max-width: 85%;
-    left: 4%;
-    bottom: -10%;
-  }
-  .ourTeam__wrapper {
-    background-position-y: 100%;
-    height: 90vh;
-  }
-}
-@media (max-width: 360px) {
-  .ourTeam__img {
-    max-width: 90%;
-    left: 3%;
-  }
-  .ourTeam__wrapper {
-    background-position-y: 100%;
-    height: 80vh;
   }
 }
 .ourReviews {
