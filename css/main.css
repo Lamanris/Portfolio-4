@@ -2912,12 +2912,12 @@ input::-webkit-inner-spin-button {
   }
 }
 .servicesHtml-servicesTypes-topBg {
-  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%);
   background: #1d1c18;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #1d1c18 22.36%, #302e20 102.02%), linear-gradient(to bottom, #f9f8f4 16.25%, #e8e6e2 102.54%);
+  background: linear-gradient(to bottom, #1d1c18 22.36%, #302e20 102.02%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1d1c18", endColorstr="#302e20",GradientType=0 );
   /* IE6-9 */
