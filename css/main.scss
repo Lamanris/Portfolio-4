@@ -1093,7 +1093,7 @@ input::-webkit-inner-spin-button {
           position: absolute;
           bottom: -13%;
           left: 50px;
-          object-fit: cover;
+          object-fit: contain;
         }
         &__rightSide {
           width: 65%;
@@ -1352,6 +1352,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  background-color: #32302f;
       &__container {
         max-width: 1040px;
       }
@@ -1706,6 +1707,8 @@ input::-webkit-inner-spin-button {
 .contacts {
   background-image: url("../img/contacts-backGround.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #242721;
       &__container {
         display: flex;
         justify-content: space-between;
@@ -2358,6 +2361,12 @@ input::-webkit-inner-spin-button {
 }
 
 .numbersBlock {
+  background: linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+  background: rgb(249,248,244); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(249,248,244,1) 16.25%, rgba(232,230,226,1) 102.54%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(249,248,244,1) 16.25%,rgba(232,230,226,1) 102.54%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(249,248,244,1) 16.25%,rgba(232,230,226,1) 102.54%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f8f4', endColorstr='#e8e6e2',GradientType=0 ); /* IE6-9 */
       &__title {
         color: #423805;
         padding-bottom: 62px;
@@ -2541,11 +2550,6 @@ input::-webkit-inner-spin-button {
           min-width: 290px;
         }
   }
-}
-
-.aboutCompany-footer__container {
-  padding-top: 98px;
-  padding-bottom: 98px;
 }
 
 //servicesHtml
@@ -3030,7 +3034,7 @@ input::-webkit-inner-spin-button {
 //servicesHtml-servicesTypes
 
 .servicesHtml-servicesTypes-topBg {
-  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%) !important;
+  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
   background: rgb(29,28,24); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(29,28,24,1) 22.36%, rgba(48,46,32,1) 102.02%), -moz-linear-gradient(top,  rgba(249,248,244,1) 16.25%, rgba(232,230,226,1) 102.54%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  rgba(29,28,24,1) 22.36%,rgba(48,46,32,1) 102.02%), -webkit-linear-gradient(top,  rgba(249,248,244,1) 16.25%,rgba(232,230,226,1) 102.54%); /* Chrome10-25,Safari5.1-6 */
