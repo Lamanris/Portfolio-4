@@ -1141,6 +1141,7 @@ input::-webkit-inner-spin-button {
         &__wrapper {
           background-position: center top;
           background-size: 69%;
+          height: 100vh;
         }
   }
 }
@@ -1151,15 +1152,27 @@ input::-webkit-inner-spin-button {
         }
         &__img {
           max-width: 50%;
+          position: absolute;
+          left: 24%;
+          bottom: -10%;
+          margin-bottom: 0;
         }
         &__wrapper {
-          background-position: center top;
           background-size: 70%;
+          background-position-y: 100px;
         }
         &__name {
           font-size: 16px;
           line-height: 21px;
         }
+  }
+}
+@media (max-width: 800px) {
+  .ourTeam {
+    &__img {
+      max-width: 60%;
+      left: 18%;
+    }
   }
 }
 @media (max-width: 660px) {
@@ -1168,8 +1181,8 @@ input::-webkit-inner-spin-button {
           flex-wrap: wrap;
         }
         &__img {
-          max-width: 100%;
-          margin: 0 auto -50px auto;
+          max-width: 75%;
+          left: 10%;
         }
         &__wrapper {
           background-position: bottom;
@@ -1194,7 +1207,31 @@ input::-webkit-inner-spin-button {
         }
   }
 }
-
+@media (max-width: 500px) {
+  .ourTeam {
+    &__img {
+      max-width: 85%;
+      left: 4%;
+      bottom: -10%;
+    }
+    &__wrapper {
+      background-position-y: 100%;
+      height: 90vh;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .ourTeam {
+    &__img {
+      max-width: 90%;
+      left: 3%;
+    }
+    &__wrapper {
+      background-position-y: 100%;
+      height: 80vh;
+    }
+  }
+}
 .ourReviews {
   background: #232222;
   padding-bottom: 181px;
@@ -1787,8 +1824,8 @@ input::-webkit-inner-spin-button {
             }
       }
       &__formBlock {
-        width: 28%;
-        min-width: 327px;
+        width: 100%;
+        max-width: 327px;
             &__wrapper {
               border: 1px solid rgba(255, 255, 255, 0.4);
               box-sizing: border-box;
