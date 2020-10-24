@@ -243,5 +243,3 @@ videoButton.addEventListener('click', function () {
 
 
 
-
-

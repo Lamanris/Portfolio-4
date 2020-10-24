@@ -25,9 +25,11 @@ body {
 }
 
 .index-topbg {
+  background-color: #050501;
   background-image: url("../img/index-topBg.png");
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 .header {
       &__container {
@@ -751,7 +753,6 @@ input::-webkit-inner-spin-button {
   linear-gradient(0deg, #1F1E1B, #1F1E1B);
   text-align: center;
         &__title {
-          padding-top: 65px;
           margin-bottom: 13px;
         }
         &__wrapper {
@@ -846,6 +847,12 @@ input::-webkit-inner-spin-button {
   line-height: 40px;
   color: #FCFFD5;
   text-align: center;
+  padding-top: 80px;
+}
+@media (max-width: 600px) {
+  .blockTitle {
+    padding-top: 64px;
+  }
 }
 .switchButtons {
   font-style: normal;
@@ -1020,7 +1027,6 @@ input::-webkit-inner-spin-button {
 .ourTeam {
   background: linear-gradient(107.42deg, #181616 -4.1%, #1B1A17 91.06%);
         &__title {
-          padding-top: 80px;
           margin-bottom: 64px;
         }
         &__name {
@@ -1087,6 +1093,7 @@ input::-webkit-inner-spin-button {
           position: absolute;
           bottom: -13%;
           left: 50px;
+          object-fit: cover;
         }
         &__rightSide {
           width: 65%;
@@ -1187,7 +1194,6 @@ input::-webkit-inner-spin-button {
               }
         }
         &__title {
-          padding-top: 64px;
           margin-bottom: 45px;
         }
   }
@@ -1197,7 +1203,6 @@ input::-webkit-inner-spin-button {
   background: #232222;
   padding-bottom: 181px;
         &__title {
-          padding-top: 72px;
           margin-bottom: 22px;
         }
 }
@@ -1601,7 +1606,8 @@ input::-webkit-inner-spin-button {
     &__title {
       margin-bottom: 36px;
       background: none;
-      margin-top: 72px;
+      padding-top: 80px;
+      margin-top: 0;
     }
   }
 }
@@ -1627,16 +1633,16 @@ input::-webkit-inner-spin-button {
   .ourWorks__example-popup__subTitle {
     margin-top: 34px;
   }
-  .ourWorks__example-popup__body {
-
+  .ourWorks__example-popup {
+    &__img {
+      float: none;
+      width: 60%;
+    }
   }
 }
-@media (max-width: 680px) {
-  .ourWorks__example-popup {
-        &__img {
-          float: none;
-          width: 60%;
-        }
+@media (max-width: 600px) {
+  .ourWorks__title {
+    padding-top: 64px;
   }
 }
 @media (max-width: 500px) {
@@ -1665,7 +1671,6 @@ input::-webkit-inner-spin-button {
   background: linear-gradient(180deg, #222222 0%, #1F241D 118.29%);
       &__title {
         color: white;
-        padding-top: 72px;
         margin-bottom: 46px;
       }
       &__wrapper {
@@ -1698,7 +1703,6 @@ input::-webkit-inner-spin-button {
     display: none;
   }
 }
-
 .contacts {
   background-image: url("../img/contacts-backGround.png");
   background-size: cover;
@@ -1709,14 +1713,13 @@ input::-webkit-inner-spin-button {
         padding-bottom: 113px;
       }
       &__title {
-        padding-top: 98px;
         padding-bottom: 66px;
       }
       &__imgBlock {
             &__img {
+              max-width: 100%;
               border-radius: 30px 0;
               margin-bottom: 18px;
-              max-width: 100%;
             }
             &__textBox {
               max-width: 600px;
@@ -1877,7 +1880,6 @@ input::-webkit-inner-spin-button {
           padding-bottom: 97px;
         }
         &__title {
-          padding-top: 72px;
           padding-bottom: 59px;
         }
         &__formBlock {
@@ -1894,7 +1896,6 @@ input::-webkit-inner-spin-button {
 @media (max-width: 652px) {
   .contacts {
         &__title {
-          padding-top: 81px;
           padding-bottom: 34px;
         }
         &__container {
@@ -2179,7 +2180,7 @@ input::-webkit-inner-spin-button {
           font-size: 40px;
           line-height: 50px;
           margin-bottom: 50px;
-          margin-top: 100px;
+          margin-top: 120px;
         }
         &__text {
           font-size: 14px;
@@ -2230,7 +2231,6 @@ input::-webkit-inner-spin-button {
 }
 .specialityBlock {
       &__title {
-        padding-top: 111px;
         padding-bottom: 26px;
       }
       &__wrapper {
@@ -2307,9 +2307,6 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 1135px) {
   .specialityBlock {
-        &__title {
-          padding-top: 57px;
-        }
         &__items {
           width: 32%;
         }
@@ -2333,6 +2330,7 @@ input::-webkit-inner-spin-button {
 .proudBlock {
   padding-bottom: 181px;
       &__title {
+        padding-top: 0;
         margin-top: 47px;
         margin-bottom: 21px;
       }
@@ -2362,7 +2360,6 @@ input::-webkit-inner-spin-button {
 .numbersBlock {
       &__title {
         color: #423805;
-        padding-top: 84px;
         padding-bottom: 62px;
       }
       &__numbersInfo {
@@ -2496,9 +2493,6 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 770px) {
   .numbersBlock {
-        &__title {
-          padding-bottom: 42px;
-        }
         &__numbersInfo {
               &__item {
                 width: 50%;
@@ -2557,7 +2551,7 @@ input::-webkit-inner-spin-button {
 //servicesHtml
 
 .servicesHtml-topBg {
-  background: url("../img/servicesHtml-topBg.png") center / cover no-repeat;
+  background: #060501 url("../img/servicesHtml-topBg.png") no-repeat center/cover;
 }
 .servicesHtml {
       &-mainBlock__textBox {
@@ -2765,16 +2759,12 @@ input::-webkit-inner-spin-button {
 //ourCasesHtml
 
 .ourCasesHtml-topBg {
-  background: url(".././img/ourCasesHtml-topBG.png") no-repeat;
-  background-size: cover;
+  background: #0f0f0c url(".././img/ourCasesHtml-topBG.png") no-repeat center/cover;
 }
 .ourCases {
   background-image: url("../img/ourCasesHtml-ourCasesBg.png");
   background-repeat: no-repeat;
   background-size: cover;
-      &__title {
-        padding-top: 66px;
-      }
       &__swiper-wrapper {
         justify-content: space-between;
         padding-bottom: 45px;
@@ -3040,7 +3030,12 @@ input::-webkit-inner-spin-button {
 //servicesHtml-servicesTypes
 
 .servicesHtml-servicesTypes-topBg {
-  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+  background: linear-gradient(261.12deg, #1D1C18 22.36%, #302E20 102.02%), linear-gradient(225.89deg, #F9F8F4 16.25%, #E8E6E2 102.54%) !important;
+  background: rgb(29,28,24); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(29,28,24,1) 22.36%, rgba(48,46,32,1) 102.02%), -moz-linear-gradient(top,  rgba(249,248,244,1) 16.25%, rgba(232,230,226,1) 102.54%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(29,28,24,1) 22.36%,rgba(48,46,32,1) 102.02%), -webkit-linear-gradient(top,  rgba(249,248,244,1) 16.25%,rgba(232,230,226,1) 102.54%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(29,28,24,1) 22.36%,rgba(48,46,32,1) 102.02%), linear-gradient(to bottom,  rgba(249,248,244,1) 16.25%,rgba(232,230,226,1) 102.54%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1c18', endColorstr='#302e20',GradientType=0 ); /* IE6-9 */
   box-shadow: inset 0 16px 19px rgba(0, 0, 0, 0.17);
 }
 .servicesTypes {
