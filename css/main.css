@@ -1130,7 +1130,7 @@ input::-webkit-inner-spin-button {
     margin-top: 21px;
   }
   .ourTeam__img {
-    width: 50%;
+    max-width: 50%;
   }
   .ourTeam__wrapper {
     background-position: center top;
@@ -1146,11 +1146,8 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
   }
   .ourTeam__img {
-    width: 100%;
-    margin: 0 auto -50px auto;
-  }
-  .ourTeam__img img {
     max-width: 100%;
+    margin: 0 auto -50px auto;
   }
   .ourTeam__wrapper {
     background-position: bottom;

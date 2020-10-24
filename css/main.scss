@@ -1150,8 +1150,7 @@ input::-webkit-inner-spin-button {
           margin-top: 21px;
         }
         &__img {
-          width: 50%;
-
+          max-width: 50%;
         }
         &__wrapper {
           background-position: center top;
@@ -1169,11 +1168,8 @@ input::-webkit-inner-spin-button {
           flex-wrap: wrap;
         }
         &__img {
-          width: 100%;
+          max-width: 100%;
           margin: 0 auto -50px auto;
-              img {
-                max-width: 100%;
-              }
         }
         &__wrapper {
           background-position: bottom;
