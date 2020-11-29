@@ -1160,7 +1160,6 @@ input::-webkit-inner-spin-button {
         }
         &__img {
           max-width: 50%;
-          margin-bottom: 0;
         }
         &__wrapper {
           background-size: 70%;
@@ -1183,7 +1182,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 660px) {
   .ourTeam {
         &__leftSide {
-          flex-wrap: wrap;
+          
         }
         &__img {
           max-width: 90%;
@@ -1196,6 +1195,10 @@ input::-webkit-inner-spin-button {
         &__info {
           width: 50%;
           margin-top: 0;
+        }
+        &__info1 {
+          position: absolute;
+          left: 0;
         }
         &__info2 {
           position: absolute;
