@@ -149,16 +149,6 @@ body {
 }
 
 @media (max-width: 750px ) {
-  body.lock {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-  }
-  html.lock {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-  }
   .header__burger {
     display: block;
     width: 30px;
@@ -446,11 +436,9 @@ body {
 }
 body.lock {
   overflow: hidden;
-  position: relative;
 }
 html.lock {
   overflow: hidden;
-  position: relative;
 }
 .all-popup {
   position: fixed;
