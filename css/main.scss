@@ -1147,11 +1147,13 @@ input::-webkit-inner-spin-button {
           transform: rotate(0.72deg);
           margin-bottom: -50px;
           bottom: 0;
-          max-height: 100%;
         }
         &__wrapper {
           background-position: center top;
           background-size: 69%;
+        }
+        &__info2 {
+          float: none;
         }
   }
 }
@@ -1212,6 +1214,7 @@ input::-webkit-inner-spin-button {
         }
   }
 }
+
 .ourReviews {
   background: #232222;
   padding-bottom: 181px;
