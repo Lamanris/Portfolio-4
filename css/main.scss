@@ -67,6 +67,7 @@ body {
         line-height: 19px;
         text-align: right;
         color: #FCFFD4;
+        text-decoration: none;
       }
       &__mail {
         font-style: normal;
@@ -76,6 +77,8 @@ body {
         text-align: right;
         color: #FCFFD4;
         opacity: 0.3;
+        text-decoration: none;
+        display: block;
       }
       &__leftSide {
         display: flex;
@@ -426,6 +429,7 @@ body {
 }
 body.lock {
   overflow: hidden;
+  position:relative;
 }
 .all-popup {
   position: fixed;
@@ -492,17 +496,14 @@ body.lock {
     opacity: 0.4;
     max-width: 254px;
   }
-
   &__input {
     border-bottom: 1px solid #F2F2F2;
     margin-bottom: 16px;
     max-width: 238px;
     opacity: 0.4;
-
     &-highlighted {
       opacity: 0.8;
     }
-
     input {
       background: inherit;
       outline: none;
@@ -746,6 +747,19 @@ input::-webkit-inner-spin-button {
     font-size: 22px;
   }
 }
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.my-animate {
+  animation: fadeInTop 0.5s ease forwards;
+}
 
 .servicesBlock {
   background: url("../img/servicesBlock-bigEllipse.png") right bottom no-repeat, linear-gradient(116.64deg, #26241E 35.16%, #15130D 71.84%),
@@ -758,7 +772,6 @@ input::-webkit-inner-spin-button {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          margin-top: 42px;
         }
         &__items {
           width: 31.6%;
@@ -875,22 +888,19 @@ input::-webkit-inner-spin-button {
 .servicesBlock__bigWrapper {
   position: relative;
 }
-.physicWrapper {
-  position: absolute;
-  visibility: hidden;
-  display: flex;
+.servicesBlock__twoSwitchButtons {
+  margin-bottom: 42px;
+}
+.physicItem {
+  display: none;
       &.active {
-        position: static;
-        visibility: visible;
+        display: block;
       }
 }
-.juristicWrapper {
-  position: absolute;
-  visibility: hidden;
-  display: flex;
+.juristicItem {
+  display: none;
   &.active {
-    position: static;
-    visibility: visible;
+    display: block;
   }
 }
 .twoSwitchButtons {
@@ -1150,7 +1160,7 @@ input::-webkit-inner-spin-button {
         }
         &__img {
           max-width: 50%;
-          margin-bottom: -50px;
+          margin-bottom: 0;
         }
         &__wrapper {
           background-size: 70%;
@@ -1180,9 +1190,8 @@ input::-webkit-inner-spin-button {
           margin-left: 3%;
         }
         &__wrapper {
-          background-position: bottom;
           background-size: 100%;
-          background-position-y: 100px ;
+          background-position-y: 100px;
         }
         &__info {
           width: 50%;
@@ -1208,9 +1217,9 @@ input::-webkit-inner-spin-button {
         &__title {
           margin-bottom: 22px;
         }
-}
-.slider-container {
-  margin-top: 49px;
+      &__twoSwitchButtons {
+        margin-bottom: 49px;
+      }
 }
 .swiper-button-prev {
   background-color: inherit;
@@ -1259,18 +1268,19 @@ input::-webkit-inner-spin-button {
   position: relative;
   max-width: 1150px;
 }
-.video-slider {
+.videoSliderCard {
   display: none;
       &.active {
         display: flex;
       }
 }
-.photo-slider {
+.photoSliderCard {
   display: none;
       &.active {
         display: flex;
       }
 }
+
 .swiper-button-video {
   display: none;
       &.active {
@@ -1774,6 +1784,7 @@ input::-webkit-inner-spin-button {
               line-height: 21px;
               color: #FCFFD4;
               margin-bottom: 5px;
+              text-decoration: none;
             }
             &__mail {
               font-style: normal;
@@ -1782,6 +1793,7 @@ input::-webkit-inner-spin-button {
               line-height: 19px;
               color: #FCFFD4;
               opacity: 0.5;
+              text-decoration: none;
             }
             &__icon {
               opacity: 0.6;
@@ -2010,6 +2022,7 @@ input::-webkit-inner-spin-button {
         line-height: 21px;
         color: #FCFFD4;
         margin-bottom: 5px;
+        text-decoration: none;
       }
       &__mail {
         font-style: normal;
@@ -2018,6 +2031,7 @@ input::-webkit-inner-spin-button {
         line-height: 19px;
         color: #FCFFD4;
         opacity: 0.5;
+        text-decoration: none;
       }
       &__icon {
         margin-right: 14px;
@@ -2240,9 +2254,12 @@ input::-webkit-inner-spin-button {
         padding-bottom: 26px;
       }
       &__wrapper {
-        margin-top: 40px;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+      }
+      &__twoSwitchButtons {
+        margin-bottom: 40px;
       }
       &__items {
         width: 27%;
@@ -2343,6 +2360,9 @@ input::-webkit-inner-spin-button {
       &__container {
         position: relative;
         max-width: 1150px;
+      }
+      &__twoSwitchButtons {
+        margin-bottom: 45px;
       }
 }
 @media (max-width: 1330px) {
@@ -2772,9 +2792,11 @@ input::-webkit-inner-spin-button {
   background-image: url("../img/ourCasesHtml-ourCasesBg.png");
   background-repeat: no-repeat;
   background-size: cover;
+      &__title {
+        margin-bottom: 45px;
+      }
       &__swiper-wrapper {
         justify-content: space-between;
-        padding-bottom: 45px;
       }
       &__swiper-slide{
         width: 23%;
@@ -2844,17 +2866,14 @@ input::-webkit-inner-spin-button {
       }
       &__twoSwitchButtons {
         justify-content: left;
+        margin-top: 45px;
       }
       &__slider-juristicContainer,&__slider-physicContainer {
-        display: none;
-            &.active {
-              display: flex;
-            }
+        display: flex;
       }
       &__swiper-button-prev, &__swiper-button-next {
         position: static;
         float: right;
-
       }
       &__swiper-button-prev {
             &::after {
@@ -3043,7 +3062,6 @@ input::-webkit-inner-spin-button {
   background: -webkit-linear-gradient(top,  rgba(29,28,24,1) 22.36%,rgba(48,46,32,1) 102.02%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  rgba(29,28,24,1) 22.36%,rgba(48,46,32,1) 102.02%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1c18', endColorstr='#302e20',GradientType=0 ); /* IE6-9 */
-
   box-shadow: inset 0 16px 19px rgba(0, 0, 0, 0.17);
 }
 .servicesTypes {
@@ -3055,14 +3073,6 @@ input::-webkit-inner-spin-button {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-            &.active {
-              visibility: visible;
-              position: static;
-            }
       }
       &__item {
         width: 22.5%;

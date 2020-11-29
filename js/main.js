@@ -173,19 +173,19 @@ document.addEventListener('keydown', function (e) {
    }
 });
 
-let physicWrapper = document.getElementById('physicWrapper');
-let juristicWrapper = document.getElementById('juristicWrapper');
 let physicButton = document.getElementById('physicButton');
 let juristicButton = document.getElementById('juristicButton');
 let switchLine = document.getElementById('switchLine');
+let juristicItem = document.querySelectorAll('.juristicItem');
+let physicItem = document.querySelectorAll('.physicItem');
 
 physicButton.addEventListener('click', function () {
     if (!(this.classList.contains('active'))) {
         juristicButton.classList.remove('active');
-        juristicWrapper.classList.remove('active');
+        juristicItem.forEach(el => el.classList.remove('active'));
         switchLine.classList.remove('juristic');
         this.classList.add('active');
-        physicWrapper.classList.add('active');
+        physicItem.forEach(el => el.classList.add('active'));
         switchLine.classList.add('physic')
     }
 });
@@ -193,18 +193,18 @@ physicButton.addEventListener('click', function () {
 juristicButton.addEventListener('click', function () {
     if (!(this.classList.contains('active'))) {
         physicButton.classList.remove('active');
-        physicWrapper.classList.remove('active');
+        physicItem.forEach(el => el.classList.remove('active'));
         switchLine.classList.remove('physic');
         this.classList.add('active');
-        juristicWrapper.classList.add('active');
+        juristicItem.forEach(el => el.classList.add('active'));
         switchLine.classList.add('juristic')
     }
 });
 
 let photoButton = document.getElementById('photoButton');
 let videoButton = document.getElementById('videoButton');
-let photoSlider = document.getElementById('photo-slider');
-let videoSlider = document.getElementById('video-slider');
+let videoSliderCard = document.querySelectorAll('.videoSliderCard')
+let photoSliderCard = document.querySelectorAll('.photoSliderCard')
 let ourReviews__switchLine = document.getElementById('ourReviews__switchLine');
 let swiperButtonNextPhoto = document.getElementById('swiper-button-next-photo');
 let swiperButtonPrevPhoto = document.getElementById('swiper-button-prev-photo');
@@ -214,12 +214,12 @@ let swiperButtonPrevVideo = document.getElementById('swiper-button-prev-video');
 photoButton.addEventListener('click', function () {
     if (!(this.classList.contains('active'))) {
         videoButton.classList.remove('active');
-        videoSlider.classList.remove('active');
+        videoSliderCard.forEach(el => el.classList.remove('active'));
         ourReviews__switchLine.classList.remove('video');
         swiperButtonNextVideo.classList.remove('active');
         swiperButtonPrevVideo.classList.remove('active');
         this.classList.add('active');
-        photoSlider.classList.add('active');
+        photoSliderCard.forEach(el => el.classList.add('active'));
         ourReviews__switchLine.classList.add('photo');
         swiperButtonNextPhoto.classList.add('active');
         swiperButtonPrevPhoto.classList.add('active');
@@ -229,12 +229,12 @@ photoButton.addEventListener('click', function () {
 videoButton.addEventListener('click', function () {
     if (!(this.classList.contains('active'))) {
         photoButton.classList.remove('active');
-        photoSlider.classList.remove('active');
+        photoSliderCard.forEach(el => el.classList.remove('active'));
         ourReviews__switchLine.classList.remove('photo');
         swiperButtonNextPhoto.classList.remove('active');
         swiperButtonPrevPhoto.classList.remove('active');
         this.classList.add('active');
-        videoSlider.classList.add('active');
+        videoSliderCard.forEach(el => el.classList.add('active'));
         ourReviews__switchLine.classList.add('video');
         swiperButtonNextVideo.classList.add('active');
         swiperButtonPrevVideo.classList.add('active');
