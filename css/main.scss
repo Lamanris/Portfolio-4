@@ -1106,6 +1106,7 @@ input::-webkit-inner-spin-button {
                 max-height: 100%;
                 transform: rotate(-3.19deg);
                 object-fit: contain;
+                display: block;
               }
         }
         &__rightSide {
