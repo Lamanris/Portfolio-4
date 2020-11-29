@@ -1097,12 +1097,15 @@ input::-webkit-inner-spin-button {
           position: relative;
         }
         &__img {
-          max-width: 70%;
-          transform: rotate(-3.19deg);
+          max-width: 500px;
           position: absolute;
           bottom: -13%;
           left: 50px;
-          object-fit: contain;
+              img {
+                max-width: 100%;
+                transform: rotate(-3.19deg);
+                object-fit: contain;
+              }
         }
         &__rightSide {
           width: 65%;
@@ -1147,7 +1150,6 @@ input::-webkit-inner-spin-button {
           transform: rotate(0.72deg);
           margin-bottom: -50px;
           bottom: 0;
-          max-height: 100%;
         }
         &__wrapper {
           background-position: center top;
@@ -1180,7 +1182,6 @@ input::-webkit-inner-spin-button {
   .ourTeam {
     &__img {
       max-width: 55%;
-      left: 18%;
     }
   }
 }
