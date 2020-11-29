@@ -202,11 +202,14 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     .header__menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      margin-top: 40px;
+      display: none;
+          &.active {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+          }
       &__item {
         font-size: 35px;
         margin-bottom: 40px;
@@ -429,7 +432,8 @@ body {
 }
 body.lock {
   overflow: hidden;
-  position:relative;
+  position: relative;
+  height: 100vh;
 }
 .all-popup {
   position: fixed;
