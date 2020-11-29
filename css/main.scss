@@ -439,6 +439,8 @@ body.lock {
 }
 html.lock {
   overflow: hidden;
+  height: 100%;
+  position: relative;
 }
 .all-popup {
   position: fixed;
