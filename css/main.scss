@@ -437,10 +437,13 @@ body {
 body.lock {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 html.lock {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 .all-popup {
   position: fixed;
