@@ -6,6 +6,7 @@ $(document).ready(function(){
     });
 });
 
+
     const inputFile = document.querySelectorAll('.sendDocs-popup__input-file');
 
     /////////// Кнопка «Прикрепить файл» ///////////
