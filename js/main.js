@@ -2,10 +2,8 @@ $(document).ready(function(){
     $('.header__burger').click(function (event) {
         $('.header__burger,.header__rightSide,.header__menu').toggleClass('active');
         $('body').toggleClass('lock');
-        $('html').toggleClass('lock');
     });
 });
-
 
     const inputFile = document.querySelectorAll('.sendDocs-popup__input-file');
 
@@ -81,7 +79,6 @@ if (document.documentElement.clientWidth <= 950) {
 const popupLinks = document.querySelectorAll('.popup-link');
 const lockPadding = document.querySelectorAll('.lock-padding');
 const body = document.querySelector('body');
-const html = document.querySelector('html');
 
 let unlock = true;
 
@@ -145,7 +142,6 @@ function bodyLock() {
     }
         body.style.paddingRight = lockPaddingValue;
         body.classList.add('lock');
-        html.classList.add('lock');
 
         unlock = false;
         setTimeout(function () {
@@ -162,7 +158,6 @@ function bodyUnlock() {
         }
         body.style.paddingRight = '0px';
         body.classList.remove('lock');
-        html.classList.remove('lock');
     }, timeout);
 
     unlock = false;
